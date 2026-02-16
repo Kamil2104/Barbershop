@@ -1,9 +1,15 @@
-import './App.css'
+import React from 'react'
 
-const App = () => {
+import Header from './components/Header'
+
+import { menuItems } from './data/menu'
+
+const App: React.FC = () => {
 
   return (
-    <p>Hello</p>
+    <>
+      <Header items={menuItems} />
+    </>
   )
 }
 
