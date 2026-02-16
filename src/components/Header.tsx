@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import type { MenuItem } from '../types/navigation'
 
-import Option from './Option'
+import Option from './components/Option'
 
 interface HeaderProps {
     items: MenuItem[]

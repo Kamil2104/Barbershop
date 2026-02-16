@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type { MenuItem } from '../types/navigation'
+import type { MenuItem } from '../../types/navigation'
 
 interface OptionProps {
   item: MenuItem
