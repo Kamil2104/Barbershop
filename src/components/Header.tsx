@@ -8,6 +8,12 @@ interface HeaderProps {
     items: MenuItem[]
 }
 
+interface NavContentProps {
+  items: MenuItem[]
+  onItemClick?: () => void
+  layoutClassName?: string
+}
+
 const Header: React.FC<HeaderProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
@@ -18,18 +24,11 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
       </div>
 
       {/* Navigation */}
-      <nav className="hidden lg:flex items-center gap-6">
-        {items.map((item) => (
-          <Option key={item.label} item={item} />
-        ))}
-
-        {/* Booking Button */}
-        <a
-          href="#booking"
-          className="px-5 py-2 bg-zinc-900 text-zinc-100 text-sm font-medium uppercase tracking-wide rounded-md hover:bg-zinc-700 transition-colors duration-200"
-        >
-          Book Now
-        </a>
+      <nav className="hidden lg:flex">
+        <NavContent
+          items={items}
+          layoutClassName="flex items-center gap-6"
+        />
       </nav>
 
       {/* Hamburger icon */}
@@ -52,19 +51,35 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
             : "scale-y-0 opacity-0 pointer-events-none"
         }`}
       >
-        {items.map((item) => (
-          <Option key={item.label} item={item} onClick={() => setIsOpen(false)} />
-        ))}
-
-        <a
-          href="#booking"
-          onClick={() => setIsOpen(false)}
-          className="px-5 py-2 bg-zinc-900 text-zinc-100 text-sm font-medium uppercase tracking-wide rounded-md hover:bg-zinc-700 transition-colors duration-200"
-        >
-          Book Now
-        </a>
+        <NavContent
+          items={items}
+          onItemClick={() => setIsOpen(false)}
+          layoutClassName="flex flex-col items-center gap-6"
+        />
       </div>
     </header>
+  )
+}
+
+const NavContent: React.FC<NavContentProps> = ({ items, onItemClick, layoutClassName }) => {
+  return (
+    <div className={layoutClassName}>
+      {items.map((item) => (
+        <Option
+          key={item.label}
+          item={item}
+          onClick={onItemClick}
+        />
+      ))}
+
+      <a
+        href="#booking"
+        onClick={onItemClick}
+        className="px-5 py-2 bg-zinc-900 text-zinc-100 text-sm font-medium uppercase tracking-wide rounded-md hover:bg-zinc-700 transition-colors duration-200"
+      >
+        Book Now
+      </a>
+    </div>
   )
 }
 
