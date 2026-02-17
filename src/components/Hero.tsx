@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Title from './components/Title'
+import BigTitle from './components/BigTitle'
 
 import barbershop from '../assets/barbershop.svg'
 
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative text-center px-6">
-        <Title text="Modern Men's Grooming" textColor='text-zinc-100'/>
+        <BigTitle text="Modern Men's Grooming" textColor='text-zinc-100'/>
         <p className="mt-2 md:mt-3 lg:mt-4 text-sm md:text-base max-w-xl mx-auto text-zinc-200">
           Premium haircuts and beard styling tailored to your style.
         </p>
