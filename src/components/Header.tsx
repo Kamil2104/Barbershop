@@ -11,7 +11,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <header className="relative w-full min-h-[10vh] bg-zinc-100 text-zinc-900 flex items-center justify-between px-6 lg:px-12">
+    <header className="w-full min-h-[10vh] bg-zinc-100 text-zinc-900 flex items-center justify-between px-6 lg:px-12">
       {/* Logo */}
       <div className="text-2xl font-semibold tracking-wide">
         Barbershop
@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
       {/* Navigation */}
       <nav className="hidden lg:flex items-center gap-6">
         {items.map((item) => (
-          <Option item={item} />
+          <Option key={item.label} item={item} />
         ))}
 
         {/* Booking Button */}
@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
         </a>
       </nav>
 
-      {/* Mobile Menu Button */}
+      {/* Hamburger icon */}
       <div className="lg:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
         }`}
       >
         {items.map((item) => (
-          <Option item={item} onClick={() => setIsOpen(false)} />
+          <Option key={item.label} item={item} onClick={() => setIsOpen(false)} />
         ))}
 
         <a
