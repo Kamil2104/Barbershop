@@ -1,10 +1,8 @@
 import React from 'react'
 
-interface SmallParagraphProps {
-    text: string
-}
+import type { Content } from '../../types/text'
 
-const SmallParagraph: React.FC<SmallParagraphProps> = ({ text }) => {
+const SmallParagraph: React.FC<Content> = ({ text }) => {
   return (
     <p className='text-zinc-600 text-sm md:text-base mt-1'> {text} </p>
   )

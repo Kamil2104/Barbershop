@@ -1,10 +1,8 @@
 import React from 'react'
 
-interface BigParagraphProps {
-    text: string
-}
+import type { Content } from '../../types/text'
 
-const BigParagraph: React.FC<BigParagraphProps> = ({ text }) => {
+const BigParagraph: React.FC<Content> = ({ text }) => {
   return (
     <p className='mt-4 text-zinc-700 text-base lg:text-xl leading-relaxed'> {text} </p>
   )
