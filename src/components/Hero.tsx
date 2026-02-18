@@ -1,6 +1,7 @@
 import React from 'react'
 
 import BigTitle from './components/BigTitle'
+import SmallParagraph from './components/SmallParagraph'
 
 import barbershop from '../assets/barbershop.svg'
 
@@ -19,10 +20,14 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative text-center px-6">
-        <BigTitle text="Modern Men's Grooming" textColor='text-zinc-100'/>
-        <p className="mt-2 md:mt-3 lg:mt-4 text-sm md:text-base max-w-xl mx-auto text-zinc-200">
-          Premium haircuts and beard styling tailored to your style.
-        </p>
+        <BigTitle
+          text="Modern Men's Grooming"
+          className='text-zinc-100'
+        />
+        <SmallParagraph
+          text='Premium haircuts and beard styling tailored to your style.'
+          className='mt-2 md:mt-3 max-w-xl mx-auto text-zinc-200'
+        />
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col-reverse sm:flex-row items-center justify-center gap-4">

@@ -26,25 +26,27 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div>
-          <BigTitle text="About Us" />
+          <BigTitle text="About Us" className='text-zinc-900' />
 
           <BigParagraph
             text="We combine traditional barbering techniques with modern style to
-            deliver precision cuts tailored to your personality. Every visit is
-            more than just a haircut — it's an experience."
+                  deliver precision cuts tailored to your personality. Every visit is
+                  more than just a haircut — it's an experience."
+            className='text-zinc-700'
           />
 
           <BigParagraph
             text="With years of experience, premium grooming products, and attention
-            to every detail, we make sure you leave confident and sharp."
+                  to every detail, we make sure you leave confident and sharp."
+            className='text-zinc-700'
           />
 
           {/* Highlights */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {USP.map((p) => (
               <div>
-                <SmallTitle text={p.title} />
-                <SmallParagraph text={p.description} />
+                <SmallTitle text={p.title} className='text-zinc-900' />
+                <SmallParagraph text={p.description} className='text-zinc-600 mt-1' />
               </div>
             ))}
           </div>
