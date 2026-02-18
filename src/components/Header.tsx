@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import type { MenuItem } from '../types/navigation'
 
 import Option from './components/Option'
+import AnchorButton from './components/AnchorButton'
 
 interface HeaderProps {
     items: MenuItem[]
@@ -72,13 +73,12 @@ const NavContent: React.FC<NavContentProps> = ({ items, onItemClick, layoutClass
         />
       ))}
 
-      <a
-        href="#booking"
+      <AnchorButton
+        text='Book now'
+        href='#booking'
         onClick={onItemClick}
-        className="px-5 py-2 bg-zinc-900 text-zinc-100 text-sm font-medium uppercase tracking-wide rounded-md hover:bg-zinc-700 transition-colors duration-200"
-      >
-        Book Now
-      </a>
+        className='px-5 py-2 bg-zinc-900 text-zinc-100 text-sm font-medium hover:bg-zinc-700 transition-colors duration-200'
+      />
     </div>
   )
 }

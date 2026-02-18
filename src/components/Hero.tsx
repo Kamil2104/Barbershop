@@ -2,6 +2,7 @@ import React from 'react'
 
 import BigTitle from './components/BigTitle'
 import SmallParagraph from './components/SmallParagraph'
+import AnchorButton from './components/AnchorButton'
 
 import barbershop from '../assets/barbershop.svg'
 
@@ -31,19 +32,19 @@ const Hero: React.FC = () => {
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col-reverse sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#booking"
-            className="px-8 py-3 bg-zinc-100 text-zinc-900 text-sm md:text-base font-semibold uppercase tracking-wide rounded-md transition-all duration-300 hover:bg-zinc-300"
-          >
-            Book Appointment
-          </a>
+          <AnchorButton
+            text='Book Appointment'
+            href='#booking'
+            onClick={() => console.log('scrolling...')}
+            className='px-8 py-3 bg-zinc-100 text-zinc-900 text-sm md:text-base font-semibold hover:bg-zinc-300'
+          />
 
-          <a
-            href="#services"
-            className="px-8 py-3 border border-zinc-100 text-zinc-100 text-sm md:text-base font-semibold uppercase tracking-wide rounded-md transition-all duration-300 hover:bg-zinc-100 hover:text-zinc-900"
-          >
-            View Services
-          </a>
+          <AnchorButton
+            text='View Services'
+            href='#services'
+            onClick={() => console.log('scrolling...')}
+            className='px-8 py-3 border border-zinc-100 text-zinc-100 text-sm md:text-base font-semibold hover:bg-zinc-100 hover:text-zinc-900'
+          />
         </div>
       </div>
     </section>

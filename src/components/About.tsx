@@ -4,6 +4,7 @@ import BigTitle from './components/BigTitle'
 import SmallTitle from './components/SmallTitle'
 import BigParagraph from './components/BigParagraph'
 import SmallParagraph from './components/SmallParagraph'
+import AnchorButton from './components/AnchorButton'
 
 import barbershopInterior from '../assets/barbershop.svg'
 
@@ -53,12 +54,12 @@ const About: React.FC = () => {
 
           {/* Subtle CTA */}
           <div className="mt-10">
-            <a
-              href="#booking"
-              className="inline-block px-8 py-3 bg-zinc-900 text-zinc-100 text-sm font-semibold uppercase tracking-wide rounded-md transition-all duration-300 hover:bg-zinc-700"
-            >
-              Book Your Visit
-            </a>
+            <AnchorButton
+              text='Book Your Visit'
+              href='#booking'
+              onClick={() => console.log('scrolling...')}
+              className='inline-block px-8 py-3 bg-zinc-900 text-zinc-100 text-sm font-semibold hover:bg-zinc-700'
+            />
           </div>
         </div>
 
