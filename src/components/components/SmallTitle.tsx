@@ -2,9 +2,11 @@ import React from 'react'
 
 import type { Content } from '../../types/text'
 
-const SmallTitle: React.FC<Content> = ({ text }) => {
+const SmallTitle: React.FC<Content> = ({ text, textColor }) => {
   return (
-    <h4 className='font-semibold text-zinc-900 uppercase tracking-wide text-base lg:text-xl'> {text} </h4>
+    <h4 className={`font-semibold uppercase tracking-wide text-base lg:text-xl ${textColor ? textColor : 'text-zinc-900'}`}>
+      {text}
+    </h4>
   )
 }
 

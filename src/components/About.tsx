@@ -26,7 +26,7 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div>
-          <BigTitle text="About Us" textColor="text-zinc-900" />
+          <BigTitle text="About Us" />
 
           <BigParagraph
             text="We combine traditional barbering techniques with modern style to
