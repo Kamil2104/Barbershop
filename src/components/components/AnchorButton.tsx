@@ -8,13 +8,19 @@ interface AnchorButtonProps {
 }
 
 const AnchorButton: React.FC<AnchorButtonProps> = ({ text, href, onClick, className }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+
+    onClick?.()
+  }
+
   return (
     <a
-       href={href}
-       onClick={onClick}
-       className={`uppercase tracking-wide rounded-md transition-all duration-300 ${className ?? ''}`}
+      href={href}
+      onClick={handleClick}
+      className={`uppercase tracking-wide rounded-md transition-all duration-300 ${className ?? ''}`}
     >
-       {text}
+      {text}
     </a>
   )
 }

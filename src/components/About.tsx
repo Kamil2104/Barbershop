@@ -45,7 +45,7 @@ const About: React.FC = () => {
           {/* Highlights */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {USP.map((p) => (
-              <div>
+              <div key={p.title}>
                 <SmallTitle text={p.title} className='text-zinc-900' />
                 <SmallParagraph text={p.description} className='text-zinc-600 mt-1' />
               </div>
