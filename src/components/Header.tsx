@@ -17,6 +17,7 @@ interface NavContentProps {
 
 const Header: React.FC<HeaderProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false)
+
   return (
     <header className="w-full min-h-[10vh] bg-zinc-100 text-zinc-900 flex items-center justify-between px-6 lg:px-12">
       {/* Logo */}
@@ -35,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
       {/* Hamburger icon */}
       <div className="lg:hidden">
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => {setIsOpen(!isOpen)}}
           className="flex flex-col gap-1"
         >
           <span className="w-6 h-0.5 bg-zinc-900"></span>
@@ -46,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
 
       {/* Mobile Dropdown */}
       <div
-        className={`absolute top-[10vh] left-0 w-full bg-zinc-100 flex flex-col items-center gap-6 py-6 lg:hidden shadow-md transform transition-all duration-300 ease-in-out origin-top ${
+        className={`absolute top-[10vh] left-0 w-full bg-zinc-100 flex flex-col items-center gap-6 py-6 z-2 lg:hidden shadow-md transform transition-all duration-300 ease-in-out origin-top ${
           isOpen
             ? "scale-y-100 opacity-100"
             : "scale-y-0 opacity-0 pointer-events-none"
