@@ -7,7 +7,6 @@ import About from './components/About'
 import { menuItems } from './data/menu'
 
 const App: React.FC = () => {
-
   return (
     <>
       <Header items={menuItems} />

@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
 
       {/* Mobile Dropdown */}
       <div
-        className={`absolute top-[10vh] left-0 w-full bg-zinc-100 flex flex-col items-center gap-6 py-6 z-2 lg:hidden shadow-md transform transition-all duration-300 ease-in-out origin-top ${
+        className={`absolute top-[10vh] left-0 w-full bg-zinc-100/95 backdrop-blur-md border-t border-zinc-200 flex flex-col items-center gap-8 py-7 md:py-9 z-50 lg:hidden shadow-xl transform transition-all duration-300 ease-in-out origin-top ${
           isOpen
             ? "scale-y-100 opacity-100"
             : "scale-y-0 opacity-0 pointer-events-none"
