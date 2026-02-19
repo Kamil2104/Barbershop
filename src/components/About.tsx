@@ -5,6 +5,7 @@ import SmallTitle from './components/SmallTitle'
 import BigParagraph from './components/BigParagraph'
 import SmallParagraph from './components/SmallParagraph'
 import AnchorButton from './components/AnchorButton'
+import Section from './layout/Section'
 
 import barbershopInterior from '../assets/barbershop.svg'
 
@@ -23,8 +24,8 @@ const About: React.FC = () => {
   ]
 
   return (
-    <section className="w-full bg-zinc-100 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <Section background="bg-zinc-100">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div>
           <BigTitle text="About Us" className='text-zinc-900' />
@@ -72,7 +73,7 @@ const About: React.FC = () => {
           />
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
 
