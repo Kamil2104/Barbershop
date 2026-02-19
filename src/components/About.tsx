@@ -24,11 +24,11 @@ const About: React.FC = () => {
   ]
 
   return (
-    <Section background="bg-zinc-100">
+    <Section background="bg-surface-primary">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div>
-          <BigTitle text="About Us" className='text-zinc-900' />
+          <BigTitle text="About Us" className='text-text-primary' />
 
           <BigParagraph
             text="We combine traditional barbering techniques with modern style to
@@ -47,8 +47,8 @@ const About: React.FC = () => {
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {USP.map((p) => (
               <div key={p.title}>
-                <SmallTitle text={p.title} className='text-zinc-900' />
-                <SmallParagraph text={p.description} className='text-zinc-600 mt-1' />
+                <SmallTitle text={p.title} className='text-text-primary' />
+                <SmallParagraph text={p.description} className='text-text-muted mt-1' />
               </div>
             ))}
           </div>
@@ -59,7 +59,7 @@ const About: React.FC = () => {
               text='Book Your Visit'
               href='#booking'
               onClick={() => console.log('scrolling...')}
-              className='inline-block px-8 py-3 bg-zinc-900 text-zinc-100 text-sm font-semibold hover:bg-zinc-700'
+              className='inline-block px-8 py-3 bg-surface-inverted text-text-inverted text-sm font-semibold hover:bg-zinc-700'
             />
           </div>
         </div>

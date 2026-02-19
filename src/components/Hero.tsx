@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
 
         <SmallParagraph
           text="Premium haircuts and beard styling tailored to your style."
-          className="mt-2 md:mt-3 max-w-xl mx-auto text-zinc-200"
+          className="mt-2 md:mt-3 max-w-xl mx-auto text-text-subtle"
         />
 
         {/* Buttons */}
@@ -41,14 +41,14 @@ const Hero: React.FC = () => {
             text="Book Appointment"
             href="#booking"
             onClick={() => console.log('scrolling...')}
-            className="px-8 py-3 bg-zinc-100 text-zinc-900 text-sm md:text-base font-semibold hover:bg-zinc-300"
+            className="px-8 py-3 bg-surface-primary text-text-primary text-sm md:text-base font-semibold hover:bg-zinc-300"
           />
 
           <AnchorButton
             text="View Services"
             href="#services"
             onClick={() => console.log('scrolling...')}
-            className="px-8 py-3 border border-zinc-100 text-zinc-100 text-sm md:text-base font-semibold hover:bg-zinc-100 hover:text-zinc-900"
+            className="px-8 py-3 border border-surface-primary text-text-inverted text-sm md:text-base font-semibold hover:bg-surface-primary hover:text-text-primary"
           />
         </div>
       </div>

@@ -15,7 +15,7 @@ const Section: React.FC<SectionProps> = ({
     <section className={`
         w-full
         px-10 md:px-15 lg:px-20
-        pt-12 md:pt-18 lg:pt-20
+        pt-12 md:pt-14 lg:pt-20
         ${background}
         ${className ?? ''}`
     }>

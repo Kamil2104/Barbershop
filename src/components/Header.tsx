@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="w-full min-h-[10vh] bg-zinc-100 text-zinc-900 flex items-center justify-between px-6 lg:px-12">
+    <header className="w-full min-h-[10vh] bg-surface-primary text-text-primary flex items-center justify-between px-6 lg:px-12">
       {/* Logo */}
       <div className="text-2xl font-semibold tracking-wide">
         Barbershop
@@ -39,9 +39,9 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
           onClick={() => {setIsOpen(!isOpen)}}
           className="flex flex-col gap-1"
         >
-          <span className="w-6 h-0.5 bg-zinc-900"></span>
-          <span className="w-6 h-0.5 bg-zinc-900"></span>
-          <span className="w-6 h-0.5 bg-zinc-900"></span>
+          <span className="w-6 h-0.5 bg-surface-inverted"></span>
+          <span className="w-6 h-0.5 bg-surface-inverted"></span>
+          <span className="w-6 h-0.5 bg-surface-inverted"></span>
         </button>
       </div>
 
