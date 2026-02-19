@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="w-full min-h-[10vh] bg-surface-primary text-text-primary flex items-center justify-between px-6 lg:px-12">
+    <header className="w-full min-h-[10vh] bg-surface-primary text-text-primary flex items-center justify-between px-5 md:px-7.5 lg:px-10">
       {/* Logo */}
       <div className="text-2xl font-semibold tracking-wide">
         Barbershop
