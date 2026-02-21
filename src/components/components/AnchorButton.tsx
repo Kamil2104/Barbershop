@@ -18,7 +18,7 @@ const AnchorButton: React.FC<AnchorButtonProps> = ({ text, href, onClick, classN
     <a
       href={href}
       onClick={handleClick}
-      className={`uppercase tracking-wide rounded-md transition-all duration-300 ${className ?? ''}`}
+      className={`uppercase tracking-wide rounded-md transition-all duration-300 cursor-pointer ${className ?? ''}`}
     >
       {text}
     </a>

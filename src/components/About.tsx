@@ -24,7 +24,7 @@ const About: React.FC = () => {
   ]
 
   return (
-    <Section background="bg-surface-primary">
+    <Section id='about' background="bg-surface-primary">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div>

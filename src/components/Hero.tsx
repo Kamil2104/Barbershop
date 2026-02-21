@@ -6,6 +6,7 @@ import AnchorButton from './components/AnchorButton'
 import Section from './layout/Section'
 
 import barbershop from '../assets/barbershop.svg'
+import { scrollTo } from '../utils/scrollTo'
 
 const Hero: React.FC = () => {
   return (
@@ -47,7 +48,7 @@ const Hero: React.FC = () => {
           <AnchorButton
             text="View Services"
             href="#services"
-            onClick={() => console.log('scrolling...')}
+            onClick={() => scrollTo('services')}
             className="px-8 py-3 border border-surface-primary text-text-inverted text-sm md:text-base font-semibold hover:bg-surface-primary hover:text-text-primary"
           />
         </div>

@@ -5,6 +5,8 @@ import type { MenuItem } from '../types/navigation'
 import Option from './components/Option'
 import AnchorButton from './components/AnchorButton'
 
+import { scrollTo } from '../utils/scrollTo'
+
 interface HeaderProps {
     items: MenuItem[]
 }
@@ -70,14 +72,20 @@ const NavContent: React.FC<NavContentProps> = ({ items, onItemClick, layoutClass
         <Option
           key={item.label}
           item={item}
-          onClick={onItemClick}
+          onClick={() => {
+            scrollTo(item.href.replace('#', ''))
+            onItemClick?.()
+          }}
         />
       ))}
 
       <AnchorButton
         text='Book now'
         href='#booking'
-        onClick={onItemClick}
+        onClick={() => {
+          scrollTo('#booking')
+          onItemClick?.()
+        }}
         className='px-5 py-2 bg-zinc-900 text-zinc-100 text-sm font-medium hover:bg-zinc-700 transition-colors duration-200'
       />
     </div>

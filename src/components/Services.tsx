@@ -16,7 +16,7 @@ const Services: React.FC = () => {
   const itemsToShow = useServicesItemsLimit()
 
   return (
-    <Section background="bg-surface-primary">
+    <Section id="services" background="bg-surface-primary">
         <BigTitle text="Services" className='text-text-primary' />
 
         <div className="lg:mt-8 md:space-y-12 lg:space-y-16">
