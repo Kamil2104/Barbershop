@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import type { MenuItem } from '../types/navigation'
 
@@ -20,8 +20,30 @@ interface NavContentProps {
 const Header: React.FC<HeaderProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const [isVisible, setIsVisible] = useState(true)
+  const lastScrollY = useRef(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        setIsVisible(false)
+      } else {
+        setIsVisible(true)
+      }
+
+      lastScrollY.current = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="w-full min-h-[10vh] bg-surface-primary text-text-primary flex items-center justify-between px-5 md:px-7.5 lg:px-10">
+    <header className={`fixed top-0 left-0 w-full min-h-[10vh] bg-surface-primary text-text-primary flex items-center justify-between px-5 md:px-7.5 lg:px-10 transition-transform duration-300 ease-in-out z-50 ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
       {/* Logo */}
       <div className="text-2xl font-semibold tracking-wide">
         Barbershop
