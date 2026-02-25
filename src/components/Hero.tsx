@@ -11,7 +11,7 @@ import { scrollTo } from '../utils/scrollTo'
 const Hero: React.FC = () => {
   return (
     <Section
-      className="relative h-[calc(100vh-10vh)] overflow-hidden flex items-center justify-center"
+      className="relative h-screen overflow-hidden flex items-center justify-center"
       background="bg-transparent"
     >
       {/* Background SVG */}
