@@ -49,7 +49,7 @@ const Services: React.FC = () => {
                         [type]: !prev[type],
                       }))
                     }
-                    className="group inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 mb-6 md:mb-3 lg:mb-0 rounded-full border border-border-subtle bg-surface-secondary text-text-primary text-xs lg:text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:border-text-primary hover:bg-surface-primary cursor-pointer"
+                    className="group inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 mb-6 md:mb-3 lg:mb-0 rounded-full border border-border-subtle bg-surface-secondary text-text-primary text-xs lg:text-sm font-semibold uppercase tracking-wider transition-colors duration-300 hover:bg-text-primary/5 hover:border-text-primary cursor-pointer"
                   >
                     <span>{isExpanded ? 'Show Less' : 'Show More'}</span>
                     <span
