@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
+import { useHeaderVisibility } from '../hooks/useHeaderVisibility'
 
 import type { MenuItem } from '../types/navigation'
 
@@ -20,25 +21,7 @@ interface NavContentProps {
 const Header: React.FC<HeaderProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const [isVisible, setIsVisible] = useState(true)
-  const lastScrollY = useRef(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY
-
-      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        setIsVisible(false)
-      } else {
-        setIsVisible(true)
-      }
-
-      lastScrollY.current = currentScrollY
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const isVisible = useHeaderVisibility(80);
 
   return (
     <header className={`fixed top-0 left-0 w-full min-h-[10vh] bg-surface-primary text-text-primary flex items-center justify-between px-5 md:px-7.5 lg:px-10 transition-transform duration-300 ease-in-out z-50 ${
