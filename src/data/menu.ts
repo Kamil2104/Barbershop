@@ -7,3 +7,8 @@ export const menuItems: MenuItem[] = [
   { label: "Find Us", href: "#location" },
   { label: "Contact", href: "#contact" }
 ]
+
+export const footerLinks: MenuItem[] = [
+  { label: 'Privacy', href: '#' },
+  { label: 'Terms', href: '#' },
+]

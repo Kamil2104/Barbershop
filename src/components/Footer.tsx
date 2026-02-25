@@ -5,9 +5,11 @@ import ContactItem from './components/ContactItem'
 
 import { contactOptions } from '../data/contactOptions'
 import { openingHours } from '../data/openingHours'
+import { footerLinks } from '../data/menu'
 
 import type { ContactOption } from '../types/contact'
 import type { OpenHours } from '../types/openHours'
+import type { MenuItem } from '../types/navigation'
 
 import MediumTitle from './components/MediumTitle'
 import BigParagraph from './components/BigParagraph'
@@ -77,10 +79,16 @@ const Footer: React.FC = () => {
               © {new Date().getFullYear()} Modern Barbershop. All rights reserved.
             </p>
 
-            {/* Create reusable component for a */}
             <div className="flex gap-6 text-xs text-text-muted uppercase tracking-widest">
-              <a href="#" className="hover:text-text-inverted transition-colors">Privacy</a>
-              <a href="#" className="hover:text-text-inverted transition-colors">Terms</a>
+              {footerLinks.map((link: MenuItem) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="hover:text-text-inverted transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
 
