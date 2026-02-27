@@ -57,8 +57,7 @@ const About: React.FC = () => {
           <div className="mt-10">
             <AnchorButton
               text='Book Your Visit'
-              href='#booking'
-              onClick={() => console.log('scrolling...')}
+              href='https://booksy.com/pl-pl?gad_source=1&gad_campaignid=11490709833&gbraid=0AAAAADE3ZKsAEuOjtBhuOsQlGGFGAGbK4&gclid=CjwKCAiA-__MBhAKEiwASBmsBBWdmlTccRnmid2qaNU5pqVLznIT7ZEJpwu4BYm2G7pPeubrcQapghoCo6EQAvD_BwE#ba_s=seo'
               className='inline-block px-8 py-3 bg-surface-inverted text-text-inverted text-sm font-semibold hover:bg-zinc-700'
             />
           </div>

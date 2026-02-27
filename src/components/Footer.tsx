@@ -38,7 +38,9 @@ const Footer: React.FC = () => {
 
               <div>
                 <a
-                  href="#booking"
+                  href='https://booksy.com/pl-pl?gad_source=1&gad_campaignid=11490709833&gbraid=0AAAAADE3ZKsAEuOjtBhuOsQlGGFGAGbK4&gclid=CjwKCAiA-__MBhAKEiwASBmsBBWdmlTccRnmid2qaNU5pqVLznIT7ZEJpwu4BYm2G7pPeubrcQapghoCo6EQAvD_BwE#ba_s=seo'
+                  target='_blank'
+                  rel="noopener noreferrer"
                   className="inline-block border border-border-subtle mt-4 px-4 lg:px-5 py-2.5 lg:py-3 text-xs lg:text-sm uppercase tracking-widest text-text-inverted hover:bg-text-inverted hover:text-surface-inverted transition-all duration-300"
                 >
                   Book Appointment

@@ -40,8 +40,7 @@ const Hero: React.FC = () => {
         <div className="mt-6 flex flex-col-reverse sm:flex-row items-center justify-center gap-4">
           <AnchorButton
             text="Book Appointment"
-            href="#booking"
-            onClick={() => console.log('scrolling...')}
+            href='https://booksy.com/pl-pl?gad_source=1&gad_campaignid=11490709833&gbraid=0AAAAADE3ZKsAEuOjtBhuOsQlGGFGAGbK4&gclid=CjwKCAiA-__MBhAKEiwASBmsBBWdmlTccRnmid2qaNU5pqVLznIT7ZEJpwu4BYm2G7pPeubrcQapghoCo6EQAvD_BwE#ba_s=seo'
             className="px-8 py-3 bg-surface-primary text-text-primary text-sm md:text-base font-semibold hover:bg-zinc-300"
           />
 

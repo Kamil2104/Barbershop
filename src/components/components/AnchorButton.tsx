@@ -9,7 +9,11 @@ interface AnchorButtonProps {
 
 const AnchorButton: React.FC<AnchorButtonProps> = ({ text, href, onClick, className }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
+    const isAnchorLink = href.startsWith('#')
+
+    if (isAnchorLink) {
+      e.preventDefault()
+    }
 
     onClick?.()
   }
@@ -19,6 +23,8 @@ const AnchorButton: React.FC<AnchorButtonProps> = ({ text, href, onClick, classN
       href={href}
       onClick={handleClick}
       className={`uppercase tracking-wide rounded-md transition-all duration-300 cursor-pointer ${className ?? ''}`}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       {text}
     </a>
