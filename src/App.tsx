@@ -3,8 +3,9 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
-import Privacy from './pages/Privacy'
-import Terms from './pages/Terms'
+import PrivacyTerms from './pages/PrivacyTerms'
+
+import { privacyPolicy, termsOfService } from './data/privacyRules'
 
 const App: React.FC = () => {
   return (
@@ -12,8 +13,8 @@ const App: React.FC = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={ <Home /> }/>
-          <Route path='/privacy' element={ <Privacy /> }/>
-          <Route path='/terms' element={ <Terms /> }/>
+          <Route path='/privacy' element={ <PrivacyTerms title="Privacy Policy" items={privacyPolicy} /> }/>
+          <Route path='/terms' element={ <PrivacyTerms title="Terms" items={termsOfService} /> }/>
         </Routes>
       </BrowserRouter>
     </>

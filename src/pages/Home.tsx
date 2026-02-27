@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Header from '../components/Header'
 import Hero from '../components/Hero'
@@ -11,6 +11,10 @@ import Footer from '../components/Footer'
 import { menuItems } from '../data/menu'
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <Header items={menuItems} />

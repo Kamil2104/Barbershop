@@ -10,6 +10,6 @@ export const menuItems: MenuItem[] = [
 ]
 
 export const footerLinks: MenuItem[] = [
-  { label: 'Privacy', href: '#' },
-  { label: 'Terms', href: '#' },
+  { label: 'Privacy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
 ]

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import Section from './layout/Section'
 import ContactItem from './components/ContactItem'
@@ -17,6 +18,8 @@ import SmallTitle from './components/SmallTitle'
 import ListItem from './components/ListItem'
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate()
+
   return (
     <footer>
       <Section id='contact' background='bg-surface-inverted' className='pb-0!'>
@@ -85,8 +88,8 @@ const Footer: React.FC = () => {
               {footerLinks.map((link: MenuItem) => (
                 <a
                   key={link.label}
-                  href={link.href}
                   className="hover:text-text-inverted transition-colors"
+                  onClick={() => navigate(link.href)}
                 >
                   {link.label}
                 </a>
