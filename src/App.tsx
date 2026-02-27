@@ -1,25 +1,21 @@
 import React from 'react'
 
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import Reviews from './components/Reviews'
-import Map from './components/Map'
-import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { menuItems } from './data/menu'
+import Home from './pages/Home'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
 
 const App: React.FC = () => {
   return (
     <>
-      <Header items={menuItems} />
-      <Hero />
-      <About />
-      <Services />
-      <Reviews />
-      <Map />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={ <Home /> }/>
+          <Route path='/privacy' element={ <Privacy /> }/>
+          <Route path='/terms' element={ <Terms /> }/>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
