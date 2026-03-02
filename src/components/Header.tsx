@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
       <nav className="hidden lg:flex">
         <NavContent
           items={items}
-          layoutClassName="flex items-center gap-6"
+          layoutClassName="flex items-center gap-5"
         />
       </nav>
 
