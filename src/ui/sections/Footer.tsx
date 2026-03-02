@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 
 import Section from '../layout/Section'
 import ContactItem from '../components/ContactItem'
@@ -15,11 +14,10 @@ import type { MenuItem } from '../../types/navigation'
 import MediumTitle from '../components/MediumTitle'
 import BigParagraph from '../components/BigParagraph'
 import SmallTitle from '../components/SmallTitle'
+import SmartLink from '../components/SmartLink'
 import ListItem from '../components/ListItem'
 
 const Footer: React.FC = () => {
-  const navigate = useNavigate()
-
   return (
     <footer>
       <Section id='contact' background='bg-surface-inverted' className='pb-0!'>
@@ -86,13 +84,13 @@ const Footer: React.FC = () => {
 
             <div className="flex gap-6 text-xs text-text-muted uppercase tracking-widest">
               {footerLinks.map((link: MenuItem) => (
-                <a
+                <SmartLink
                   key={link.label}
+                  href={link.href}
                   className="hover:text-text-inverted transition-colors cursor-pointer"
-                  onClick={() => navigate(link.href)}
                 >
                   {link.label}
-                </a>
+                </SmartLink>
               ))}
             </div>
           </div>
