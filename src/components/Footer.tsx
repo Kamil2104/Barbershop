@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
               {footerLinks.map((link: MenuItem) => (
                 <a
                   key={link.label}
-                  className="hover:text-text-inverted transition-colors"
+                  className="hover:text-text-inverted transition-colors cursor-pointer"
                   onClick={() => navigate(link.href)}
                 >
                   {link.label}
