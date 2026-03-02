@@ -13,7 +13,7 @@ import type { OfferingItem } from '../types/service'
 const Services: React.FC = () => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
 
-  const itemsToShow = useServicesItemsLimit()
+  const itemsToShow = useServicesItemsLimit({ section: 'services' })
 
   return (
     <Section id="services" background="bg-surface-primary">

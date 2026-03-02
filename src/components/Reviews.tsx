@@ -14,7 +14,7 @@ import ReviewCard from './components/ReviewCard'
 const Reviews: React.FC = () => {
   return (
     <Section id="reviews" background="bg-surface-primary">
-      <div className="max-w-7xl mx-auto relative">
+      <div className="mx-auto relative">
         <div className="relative flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 md:gap-6 mb-8 md:mb-12 lg:mb-16">
           <div className="max-w-2xl">
 

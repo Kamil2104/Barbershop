@@ -1,18 +1,26 @@
 import { useState, useEffect } from 'react'
 
-const useServicesItemsLimit = () => {
+interface UseServicesItemsLimitProps {
+  section: 'services' | 'gallery'
+}
+
+const useServicesItemsLimit = ({ section }: UseServicesItemsLimitProps) => {
   const [itemsToShow, setItemsToShow] = useState(3)
 
   useEffect(() => {
     const updateItems = () => {
       const width = window.innerWidth
 
-      // md: → 4 items
+      // md:
       if (width >= 768 && width < 1024) {
         setItemsToShow(4)
       } else {
-        // sm: and lg: → 3 items
-        setItemsToShow(3)
+        // sm:
+        if (section === 'gallery' && width < 768) {
+          setItemsToShow(4)
+        } else {
+          setItemsToShow(3)
+        }
       }
     }
 
@@ -22,7 +30,7 @@ const useServicesItemsLimit = () => {
     return () => {
       window.removeEventListener('resize', updateItems)
     }
-  }, [])
+  }, [section])
 
   return itemsToShow
 }
