@@ -1,12 +1,12 @@
 import React from 'react'
 
-import BigTitle from './components/BigTitle'
-import SmallParagraph from './components/SmallParagraph'
-import AnchorButton from './components/AnchorButton'
-import Section from './layout/Section'
+import BigTitle from '../components/BigTitle'
+import SmallParagraph from '../components/SmallParagraph'
+import AnchorButton from '../components/AnchorButton'
+import Section from '../layout/Section'
 
-import barbershop from '../assets/barbershop.svg'
-import { scrollTo } from '../utils/scrollTo'
+import barbershop from '../../assets/barbershop.svg'
+import { scrollTo } from '../../utils/scrollTo'
 
 const Hero: React.FC = () => {
   return (

@@ -1,21 +1,21 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import Section from './layout/Section'
-import ContactItem from './components/ContactItem'
+import Section from '../layout/Section'
+import ContactItem from '../components/ContactItem'
 
-import { contactOptions } from '../data/contactOptions'
-import { openingHours } from '../data/openingHours'
-import { footerLinks } from '../data/menu'
+import { contactOptions } from '../../data/contactOptions'
+import { openingHours } from '../../data/openingHours'
+import { footerLinks } from '../../data/menu'
 
-import type { ContactOption } from '../types/contact'
-import type { OpenHours } from '../types/openHours'
-import type { MenuItem } from '../types/navigation'
+import type { ContactOption } from '../../types/contact'
+import type { OpenHours } from '../../types/openHours'
+import type { MenuItem } from '../../types/navigation'
 
-import MediumTitle from './components/MediumTitle'
-import BigParagraph from './components/BigParagraph'
-import SmallTitle from './components/SmallTitle'
-import ListItem from './components/ListItem'
+import MediumTitle from '../components/MediumTitle'
+import BigParagraph from '../components/BigParagraph'
+import SmallTitle from '../components/SmallTitle'
+import ListItem from '../components/ListItem'
 
 const Footer: React.FC = () => {
   const navigate = useNavigate()

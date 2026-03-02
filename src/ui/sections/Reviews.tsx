@@ -2,14 +2,14 @@ import React from 'react'
 
 import { FiStar } from 'react-icons/fi'
 
-import { reviews } from '../data/clientReviews'
+import { reviews } from '../../data/clientReviews'
 
-import type { Review } from '../types/review'
+import type { Review } from '../../types/review'
 
-import Section from './layout/Section'
-import BigTitle from './components/BigTitle'
-import BigParagraph from './components/BigParagraph'
-import ReviewCard from './components/ReviewCard'
+import Section from '../layout/Section'
+import BigTitle from '../components/BigTitle'
+import BigParagraph from '../components/BigParagraph'
+import ReviewCard from '../components/ReviewCard'
 
 const Reviews: React.FC = () => {
   return (

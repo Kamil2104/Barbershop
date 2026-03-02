@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 
-import Header from '../components/Header'
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Services from '../components/Services'
-import Gallery from '../components/Gallery'
-import Reviews from '../components/Reviews'
-import Map from '../components/Map'
-import Footer from '../components/Footer'
+import Header from '../ui/sections/Header'
+import Hero from '../ui/sections/Hero'
+import About from '../ui/sections/About'
+import Services from '../ui/sections/Services'
+import Gallery from '../ui/sections/Gallery'
+import Reviews from '../ui/sections/Reviews'
+import Map from '../ui/sections/Map'
+import Footer from '../ui/sections/Footer'
 
 import { menuItems } from '../data/menu'
 

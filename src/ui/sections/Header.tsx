@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { useHeaderVisibility } from '../hooks/useHeaderVisibility'
+import { useHeaderVisibility } from '../../hooks/useHeaderVisibility'
 
-import type { MenuItem } from '../types/navigation'
+import type { MenuItem } from '../../types/navigation'
 
-import Option from './components/Option'
-import AnchorButton from './components/AnchorButton'
+import Option from '../components/Option'
+import AnchorButton from '../components/AnchorButton'
 
-import { scrollTo } from '../utils/scrollTo'
+import { scrollTo } from '../../utils/scrollTo'
 
 interface HeaderProps {
     items: MenuItem[]

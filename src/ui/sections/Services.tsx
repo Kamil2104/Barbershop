@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import useServicesItemsLimit from '../hooks/useServicesItemsLimit'
+import useServicesItemsLimit from '../../hooks/useServicesItemsLimit'
 
-import BigTitle from './components/BigTitle'
-import MediumTitle from './components/MediumTitle'
-import Service from './components/Service'
-import Section from './layout/Section'
+import BigTitle from '../components/BigTitle'
+import MediumTitle from '../components/MediumTitle'
+import Service from '../components/Service'
+import Section from '../layout/Section'
 
-import { offerings } from '../data/offerings'
+import { offerings } from '../../data/offerings'
 
-import type { OfferingItem } from '../types/service'
+import type { OfferingItem } from '../../types/service'
 
 const Services: React.FC = () => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
