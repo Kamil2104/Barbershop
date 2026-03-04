@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+
 import useServicesItemsLimit from '@/hooks/useServicesItemsLimit'
 
 import BigTitle from '@/ui/components/BigTitle'
@@ -49,7 +50,7 @@ const Services = () => {
                 {/* Modern Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
                   {visibleOffers.map((o: OfferingItem) => (
-                    <Service key={o.name} offer={o} />
+                    <Service key={o.name} {...o} />
                   ))}
                 </div>
 
