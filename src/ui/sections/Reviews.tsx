@@ -5,8 +5,7 @@ import { reviews } from '@/data/clientReviews'
 import type { Review } from '@/types/review'
 
 import Section from '@/ui/layout/Section'
-import BigTitle from '@/ui/components/BigTitle'
-import BigParagraph from '@/ui/components/BigParagraph'
+import Typography from '@/ui/components/Typography'
 import ReviewCard from '@/ui/components/ReviewCard'
 
 const Reviews= () => {
@@ -22,12 +21,13 @@ const Reviews= () => {
               <span>4.8 Rating on Google</span>
             </div>
 
-            <BigTitle text="What Our Clients Say" className="text-text-primary mt-0" />
+            <Typography variant="h1" className='text-text-primary mt-0'>
+              What Our Clients Say
+            </Typography>
 
-            <BigParagraph
-              text="Your feedback helps us maintain the highest standards of grooming. Join our community of satisfied gentlemen."
-              className="text-text-muted mt-4 max-w-lg"
-            />
+            <Typography variant="p-lg" className='text-text-muted mt-4 max-w-lg'>
+              Your feedback helps us maintain the highest standards of grooming. Join our community of satisfied gentlemen.
+            </Typography>
           </div>
 
           <div className="w-full md:w-auto flex justify-start md:justify-end">

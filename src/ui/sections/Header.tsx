@@ -27,12 +27,10 @@ const Header = ({ items }: HeaderProps) => {
     <header className={`fixed top-0 left-0 w-full min-h-[10vh] bg-surface-primary text-text-primary flex items-center justify-between px-5 md:px-7.5 lg:px-10 transition-transform duration-300 ease-in-out z-50 ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
-      {/* Logo */}
       <div className="text-2xl font-semibold tracking-wide">
         Barbershop
       </div>
 
-      {/* Navigation */}
       <nav className="hidden lg:flex">
         <NavContent
           items={items}
@@ -40,7 +38,6 @@ const Header = ({ items }: HeaderProps) => {
         />
       </nav>
 
-      {/* Hamburger icon */}
       <div className="lg:hidden">
         <button
           onClick={() => {setIsOpen(prev => !prev)}}
@@ -52,7 +49,7 @@ const Header = ({ items }: HeaderProps) => {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile dropdown*/}
       <div
         className={`absolute top-[10vh] left-0 w-full bg-zinc-100/95 backdrop-blur-md border-t border-zinc-200 flex flex-col items-center gap-8 py-7 md:py-9 z-50 lg:hidden shadow-xl transform transition-all duration-300 ease-in-out origin-top ${
           isOpen

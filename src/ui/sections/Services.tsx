@@ -2,8 +2,7 @@ import { useState, useMemo } from 'react'
 
 import useServicesItemsLimit from '@/hooks/useServicesItemsLimit'
 
-import BigTitle from '@/ui/components/BigTitle'
-import MediumTitle from '@/ui/components/MediumTitle'
+import Typography from '@/ui/components/Typography'
 import Service from '@/ui/components/Service'
 import Section from '@/ui/layout/Section'
 
@@ -30,7 +29,9 @@ const Services = () => {
 
   return (
     <Section id="services" background="bg-surface-primary">
-        <BigTitle text="Services" className='text-text-primary' />
+        <Typography variant="h1" className='text-text-primary'>
+          Services
+        </Typography>
 
         <div className="lg:mt-8 md:space-y-12 lg:space-y-16">
           {(['Haircut', 'Beard Trim', 'Full Grooming'] as const).map((type) => {
@@ -43,7 +44,9 @@ const Services = () => {
 
                 {/* Minimal Section Header */}
                 <div>
-                  <MediumTitle text={type} className="text-text-primary" />
+                  <Typography variant="h2" className='text-text-primary'>
+                    {type}
+                  </Typography>
                   <div className="mt-2 mb-4 h-[2px] w-16 bg-text-primary" />
                 </div>
 

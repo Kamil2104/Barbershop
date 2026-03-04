@@ -1,10 +1,12 @@
 import Section from '@/ui/layout/Section'
-import BigTitle from '@/ui/components/BigTitle'
+import Typography from '@/ui/components/Typography'
 
 const Map = () => {
   return (
     <Section id="location" background='bg-surface-primary' className="pb-12! md:pb-14! lg:pb-20!">
-        <BigTitle text='Find us' className='text-text-primary' />
+        <Typography variant="h1" className='text-text-primary'>
+          Find us
+        </Typography>
 
       <div className="w-full h-[450px] md:h-[550px] overflow-hidden rounded-xl border border-border-subtle">
         <iframe

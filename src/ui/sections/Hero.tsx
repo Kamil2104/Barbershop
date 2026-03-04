@@ -1,5 +1,4 @@
-import BigTitle from '@/ui/components/BigTitle'
-import SmallParagraph from '@/ui/components/SmallParagraph'
+import Typography from '@/ui/components/Typography'
 import AnchorButton from '@/ui/components/AnchorButton'
 import Section from '@/ui/layout/Section'
 
@@ -12,30 +11,24 @@ const Hero = () => {
       className="relative h-screen overflow-hidden flex items-center justify-center"
       background="bg-transparent"
     >
-      {/* Background SVG */}
       <img
         src={barbershop}
         alt="Barbershop background"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
 
-      {/* Content */}
       <div className="relative text-center">
-        <BigTitle
-          text="Modern Men's Grooming"
-          className="text-zinc-100"
-        />
+        <Typography variant="h1" className='text-zinc-100 md:mb-5!'>
+          Modern Men's Grooming
+        </Typography>
 
-        <SmallParagraph
-          text="Premium haircuts and beard styling tailored to your style."
-          className="mt-2 md:mt-3 max-w-xl mx-auto text-text-subtle"
-        />
+        <Typography variant="p-sm" className=' max-w-xl mx-auto text-text-subtle'>
+          Premium haircuts and beard styling tailored to your style.
+        </Typography>
 
-        {/* Buttons */}
-        <div className="mt-6 flex flex-col-reverse sm:flex-row items-center justify-center gap-4">
+        <div className="mt-5 flex flex-col-reverse sm:flex-row items-center justify-center gap-4">
           <AnchorButton
             text="Book Appointment"
             href='https://booksy.com/pl-pl?gad_source=1&gad_campaignid=11490709833&gbraid=0AAAAADE3ZKsAEuOjtBhuOsQlGGFGAGbK4&gclid=CjwKCAiA-__MBhAKEiwASBmsBBWdmlTccRnmid2qaNU5pqVLznIT7ZEJpwu4BYm2G7pPeubrcQapghoCo6EQAvD_BwE#ba_s=seo'

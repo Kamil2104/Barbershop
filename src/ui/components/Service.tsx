@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SmallParagraph from './SmallParagraph'
+import Typography from './Typography'
 
 import type { OfferingItem } from '@/types/service'
 
@@ -17,7 +17,9 @@ const Service = (offer : OfferingItem) => {
           {offer.name}
         </h3>
 
-        <SmallParagraph text={offer.description} className='text-text-muted text-sm leading-relaxed'/>
+        <Typography variant="p-sm" className='text-text-muted text-sm leading-relaxed'>
+          {offer.description}
+        </Typography>
         </div>
 
         <div className="mt-4 md:mt-6 lg:mt-8 flex items-end justify-between">
@@ -31,7 +33,6 @@ const Service = (offer : OfferingItem) => {
         </div>
       </div>
 
-      {/* Subtle Hover Accent */}
       <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-text-primary transition-colors duration-300 pointer-events-none" />
     </div>
   )

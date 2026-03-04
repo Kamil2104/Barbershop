@@ -1,7 +1,4 @@
-import BigTitle from '@/ui/components/BigTitle'
-import SmallTitle from '@/ui/components/SmallTitle'
-import BigParagraph from '@/ui/components/BigParagraph'
-import SmallParagraph from '@/ui/components/SmallParagraph'
+import Typography from '@/ui/components/Typography'
 import AnchorButton from '@/ui/components/AnchorButton'
 import Section from '@/ui/layout/Section'
 
@@ -24,34 +21,35 @@ const About = () => {
   return (
     <Section id='about' background="bg-surface-primary">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Text Content */}
         <div>
-          <BigTitle text="About Us" className='text-text-primary' />
+          <Typography variant="h1" className='text-text-primary'>
+            About Us
+          </Typography>
 
-          <BigParagraph
-            text="We combine traditional barbering techniques with modern style to
-                  deliver precision cuts tailored to your personality. Every visit is
-                  more than just a haircut — it's an experience."
-            className='text-zinc-700'
-          />
+          <Typography variant="p-lg" className='text-zinc-700'>
+            We combine traditional barbering techniques with modern style to
+            deliver precision cuts tailored to your personality. Every visit is
+            more than just a haircut — it&apos;s an experience.
+          </Typography>
 
-          <BigParagraph
-            text="With years of experience, premium grooming products, and attention
-                  to every detail, we make sure you leave confident and sharp."
-            className='text-zinc-700'
-          />
+          <Typography variant="p-lg" className='text-zinc-700'>
+            With years of experience, premium grooming products, and attention
+            to every detail, we make sure you leave confident and sharp.
+          </Typography>
 
-          {/* Highlights */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {USP.map((p) => (
               <div key={p.title}>
-                <SmallTitle text={p.title} className='text-text-primary' />
-                <SmallParagraph text={p.description} className='text-text-muted mt-1' />
+                <Typography variant="h4" className='text-text-primary'>
+                  {p.title}
+                </Typography>
+                <Typography variant="p-sm" className='text-text-muted mt-1'>
+                  {p.description}
+                </Typography>
               </div>
             ))}
           </div>
 
-          {/* Subtle CTA */}
           <div className="mt-10">
             <AnchorButton
               text='Book Your Visit'
@@ -61,7 +59,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Image */}
         <div className="relative w-full h-auto overflow-hidden rounded-lg shadow-lg self-center flex items-center">
           <img
             src={barbershopInterior}
