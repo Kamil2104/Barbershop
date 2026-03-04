@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ import Loader from '@/ui/components/Loader'
 
 import { privacyPolicy, termsOfService } from '@/data/privacyRules'
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <>
       <BrowserRouter>

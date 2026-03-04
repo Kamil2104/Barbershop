@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { FiStar } from 'react-icons/fi'
 
 import { reviews } from '@/data/clientReviews'
@@ -11,7 +9,7 @@ import BigTitle from '@/ui/components/BigTitle'
 import BigParagraph from '@/ui/components/BigParagraph'
 import ReviewCard from '@/ui/components/ReviewCard'
 
-const Reviews: React.FC = () => {
+const Reviews= () => {
   return (
     <Section id="reviews" background="bg-surface-primary">
       <div className="mx-auto relative">

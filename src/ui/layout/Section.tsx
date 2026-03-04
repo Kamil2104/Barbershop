@@ -7,12 +7,12 @@ interface SectionProps {
   background?: string
 }
 
-const Section: React.FC<SectionProps> = ({
+const Section = ({
   children,
   id,
   className,
   background = 'bg-white'
-}) => {
+}: SectionProps) => {
   return (
     <section id={id} className={`
         w-full

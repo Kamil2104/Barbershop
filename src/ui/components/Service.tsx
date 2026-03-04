@@ -4,7 +4,7 @@ import SmallParagraph from './SmallParagraph'
 
 import type { OfferingItem } from '@/types/service'
 
-const Service: React.FC<{ offer: OfferingItem }> = ({ offer }) => {
+const Service = (offer : OfferingItem) => {
   return (
     <div
       key={offer.name}

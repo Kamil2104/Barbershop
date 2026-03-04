@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Link } from 'react-router-dom'
 
 import Section from '@/ui/layout/Section'
@@ -14,7 +12,7 @@ interface PrivacyTermsProps {
   items: PolicyItem[]
 }
 
-const PrivacyTerms: React.FC<PrivacyTermsProps> = ({ title, items }) => {
+const PrivacyTerms = ({ title, items }: PrivacyTermsProps) => {
   return (
     <Section background="bg-surface-primary" className="pt-8! md:pt-10! lg:pt-12! pb-8! md:pb-10! lg:pb-12! min-h-screen">
       <div className="mx-auto">

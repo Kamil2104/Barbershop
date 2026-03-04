@@ -1,5 +1,3 @@
-import React from 'react'
-
 import BigTitle from '@/ui/components/BigTitle'
 import SmallTitle from '@/ui/components/SmallTitle'
 import BigParagraph from '@/ui/components/BigParagraph'
@@ -14,7 +12,7 @@ interface USP {
   description: string
 }
 
-const About: React.FC = () => {
+const About = () => {
   // Unique Selling Proposition
   const USP: USP[] = [
     { title: 'Precision & Detail', description: 'Every cut is crafted with accuracy and care.'},

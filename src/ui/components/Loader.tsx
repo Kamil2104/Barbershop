@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const Loader: React.FC = () => {
+const Loader = () => {
   const [dots, setDots] = useState(0)
 
   useEffect(() => {

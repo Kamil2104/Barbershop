@@ -1,5 +1,3 @@
-import React from 'react'
-
 import SmartLink from '@/ui/components/SmartLink'
 
 interface AnchorButtonProps {
@@ -9,7 +7,7 @@ interface AnchorButtonProps {
     className?: string
 }
 
-const AnchorButton: React.FC<AnchorButtonProps> = ({ text, href, onClick, className }) => {
+const AnchorButton= ({ text, href, onClick, className }: AnchorButtonProps) => {
   return (
     <SmartLink
       href={href}

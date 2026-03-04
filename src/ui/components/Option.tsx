@@ -1,5 +1,3 @@
-import React from 'react'
-
 import type { MenuItem } from '@/types/navigation'
 import AnchorButton from '@/ui/components/AnchorButton'
 
@@ -8,7 +6,7 @@ interface OptionProps {
   onClick?: () => void
 }
 
-const Option: React.FC<OptionProps> = ({ item, onClick }) => {
+const Option = ({ item, onClick }: OptionProps) => {
   return (
     <AnchorButton
       text={item.label}

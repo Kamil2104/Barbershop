@@ -5,7 +5,7 @@ import SmallParagraph from './SmallParagraph'
 
 import type { Review } from '@/types/review'
 
-const ReviewCard: React.FC<Review> = ({ author, rating, text, date }) => {
+const ReviewCard = ({ author, rating, text, date }: Review) => {
   return (
     <div className="bg-surface-secondary p-6 md:p-8 rounded-2xl border border-transparent hover:border-text-primary transition-all duration-300 flex flex-col h-full">
       <div className="flex justify-between items-start mb-4">

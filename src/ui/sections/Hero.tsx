@@ -1,5 +1,3 @@
-import React from 'react'
-
 import BigTitle from '@/ui/components/BigTitle'
 import SmallParagraph from '@/ui/components/SmallParagraph'
 import AnchorButton from '@/ui/components/AnchorButton'
@@ -8,7 +6,7 @@ import Section from '@/ui/layout/Section'
 import barbershop from '@/assets/barbershop.svg'
 import { scrollTo } from '@/utils/scrollTo'
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
     <Section
       className="relative h-screen overflow-hidden flex items-center justify-center"

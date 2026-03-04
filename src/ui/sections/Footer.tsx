@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Section from '@/ui/layout/Section'
 import ContactItem from '@/ui/components/ContactItem'
 
@@ -17,7 +15,7 @@ import SmallTitle from '@/ui/components/SmallTitle'
 import SmartLink from '@/ui/components/SmartLink'
 import ListItem from '@/ui/components/ListItem'
 
-const Footer: React.FC = () => {
+const Footer =() => {
   return (
     <footer>
       <Section id='contact' background='bg-surface-inverted' className='pb-0!'>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useHeaderVisibility } from '@/hooks/useHeaderVisibility'
 
 import type { MenuItem } from '@/types/navigation'
@@ -18,7 +18,7 @@ interface NavContentProps {
   layoutClassName?: string
 }
 
-const Header: React.FC<HeaderProps> = ({ items }) => {
+const Header = ({ items }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const isVisible = useHeaderVisibility(80);
@@ -70,7 +70,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
   )
 }
 
-const NavContent: React.FC<NavContentProps> = ({ items, onItemClick, layoutClassName }) => {
+const NavContent = ({ items, onItemClick, layoutClassName }: NavContentProps) => {
   return (
     <div className={layoutClassName}>
       {items.map((item) => (

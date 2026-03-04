@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import useServicesItemsLimit from '@/hooks/useServicesItemsLimit'
 
 import BigTitle from '@/ui/components/BigTitle'
@@ -10,7 +10,7 @@ import { offerings } from '@/data/offerings'
 
 import type { OfferingItem } from '@/types/service'
 
-const Services: React.FC = () => {
+const Services = () => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
 
   const itemsToShow = useServicesItemsLimit({ section: 'services' })

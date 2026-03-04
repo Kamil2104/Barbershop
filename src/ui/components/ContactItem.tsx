@@ -2,7 +2,7 @@ import React from 'react'
 
 import type { ContactOption } from '@/types/contact'
 
-const ContactItem: React.FC<ContactOption> = ({ text, link, logo }) => {
+const ContactItem = ({ text, link, logo }: ContactOption) => {
   return (
     <li key={text}>
         <a

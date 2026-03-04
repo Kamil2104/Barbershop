@@ -1,9 +1,7 @@
-import React from 'react'
-
 import Section from '@/ui/layout/Section'
 import BigTitle from '@/ui/components/BigTitle'
 
-const Map: React.FC = () => {
+const Map = () => {
   return (
     <Section id="location" background='bg-surface-primary' className="pb-12! md:pb-14! lg:pb-20!">
         <BigTitle text='Find us' className='text-text-primary' />

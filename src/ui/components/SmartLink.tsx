@@ -11,7 +11,7 @@ interface SmartLinkProps {
   onClick?: () => void
 }
 
-const SmartLink: React.FC<SmartLinkProps> = ({ href, children, className, onClick }) => {
+const SmartLink = ({ href, children, className, onClick }: SmartLinkProps) => {
   const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')
   const isAnchor = href.startsWith('#')
 

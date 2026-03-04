@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 
 import useServicesItemsLimit from '@/hooks/useServicesItemsLimit'
 
@@ -10,7 +10,7 @@ import { images }from '@/data/galleryImages'
 
 import type { Image } from '@/types/images'
 
-const Gallery: React.FC = () => {
+const Gallery = () => {
   const [expanded, setExpanded] = useState(false)
 
   const itemsToShow = useServicesItemsLimit({ section: 'gallery' })

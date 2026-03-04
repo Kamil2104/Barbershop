@@ -2,7 +2,7 @@ import React from 'react'
 
 import type{ Image } from '@/types/images'
 
-const Photo: React.FC<Image> = ({src, alt}) => {
+const Photo= ({src, alt}: Image) => {
   return (
     <div
         key={src}
