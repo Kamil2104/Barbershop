@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import useServicesItemsLimit from '@/hooks/useServicesItemsLimit'
 
 import BigTitle from '@/ui/components/BigTitle'
@@ -15,6 +15,18 @@ const Services: React.FC = () => {
 
   const itemsToShow = useServicesItemsLimit({ section: 'services' })
 
+  const groupedOfferings = useMemo(() => {
+    return offerings.reduce<Record<string, OfferingItem[]>>((acc, offering) => {
+      if (!acc[offering.type]) {
+        acc[offering.type] = []
+      }
+
+      acc[offering.type].push(offering)
+
+      return acc
+    }, {})
+  }, [])
+
   return (
     <Section id="services" background="bg-surface-primary">
         <BigTitle text="Services" className='text-text-primary' />
@@ -22,7 +34,7 @@ const Services: React.FC = () => {
         <div className="lg:mt-8 md:space-y-12 lg:space-y-16">
           {(['Haircut', 'Beard Trim', 'Full Grooming'] as const).map((type) => {
             const isExpanded = expanded[type]
-            const filtered = offerings.filter((o: OfferingItem) => o.type === type)
+            const filtered = groupedOfferings[type] ?? []
             const visibleOffers = isExpanded ? filtered : filtered.slice(0, itemsToShow)
 
             return (

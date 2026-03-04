@@ -24,4 +24,4 @@ const ReviewCard: React.FC<Review> = ({ author, rating, text, date }) => {
   )
 }
 
-export default ReviewCard
+export default React.memo(ReviewCard)

@@ -37,4 +37,4 @@ const Service: React.FC<{ offer: OfferingItem }> = ({ offer }) => {
   )
 }
 
-export default Service
+export default React.memo(Service)

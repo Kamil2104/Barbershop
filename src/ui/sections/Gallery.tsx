@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 
 import useServicesItemsLimit from '@/hooks/useServicesItemsLimit'
 
@@ -15,15 +15,15 @@ const Gallery: React.FC = () => {
 
   const itemsToShow = useServicesItemsLimit({ section: 'gallery' })
 
-  const visiblePhotos = expanded ? images : images.slice(0, itemsToShow)
+  const visiblePhotos = useMemo(() =>expanded ? images : images.slice(0, itemsToShow), [expanded, itemsToShow])
 
   return (
     <Section id='gallery' background='bg-surface-primary'>
       <BigTitle text='Gallery' className='text-text-primary' />
 
       <div className='mt-12 grid grid-cols-2 lg:grid-cols-3 gap-6'>
-        {visiblePhotos.map((img: Image, index: number) => (
-          <Photo key={index} index={index} img={img} />
+        {visiblePhotos.map((img: Image) => (
+          <Photo key={img.src} {...img} />
         ))}
       </div>
 

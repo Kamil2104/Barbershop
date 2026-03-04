@@ -57,8 +57,8 @@ const Footer: React.FC = () => {
                   <SmallTitle text='Contact' className='text-text-inverted uppercase tracking-wider' />
 
                   <ul className="flex flex-row md:flex-col flex-wrap gap-6 md:gap-5">
-                    {contactOptions.map((item: ContactOption) => (
-                      <ContactItem key={item.text} item={item} />
+                    {contactOptions.map((option: ContactOption) => (
+                      <ContactItem key={option.text} {...option} />
                     ))}
                   </ul>
                 </div>
@@ -68,8 +68,8 @@ const Footer: React.FC = () => {
                   <SmallTitle text='Opening Hours' className='text-text-inverted uppercase tracking-wider' />
 
                   <ul className="flex flex-row md:flex-col flex-wrap justify-between md:justify-start gap-6 md:gap-5 text-text-muted text-sm w-full md:w-auto">
-                    {openingHours.map((oH: OpenHours) => (
-                      <ListItem key={oH.day} item={oH} />
+                    {openingHours.map((option: OpenHours) => (
+                      <ListItem key={option.day} {...option} />
                     ))}
                   </ul>
                 </div>

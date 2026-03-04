@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ items }) => {
       {/* Hamburger icon */}
       <div className="lg:hidden">
         <button
-          onClick={() => {setIsOpen(!isOpen)}}
+          onClick={() => {setIsOpen(prev => !prev)}}
           className="flex flex-col gap-1"
         >
           <span className="w-6 h-0.5 bg-surface-inverted"></span>

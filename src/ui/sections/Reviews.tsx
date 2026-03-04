@@ -57,13 +57,10 @@ const Reviews: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10">
-          {reviews.map((rev: Review, index) => (
+          {reviews.map((rev: Review) => (
             <ReviewCard
-              key={index}
-              author={rev.author}
-              rating={rev.rating}
-              text={rev.text}
-              date={rev.date}
+              key={rev.author}
+              {...rev}
             />
           ))}
         </div>
