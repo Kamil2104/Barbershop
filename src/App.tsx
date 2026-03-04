@@ -2,11 +2,11 @@ import React, { Suspense, lazy } from 'react'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-const Home = lazy(() => import('./pages/Home'))
-const PrivacyTerms = lazy(() => import('./pages/PrivacyTerms'))
-import Loader from './ui/components/Loader'
+const Home = lazy(() => import('@/pages/Home'))
+const PrivacyTerms = lazy(() => import('@/pages/PrivacyTerms'))
+import Loader from '@/ui/components/Loader'
 
-import { privacyPolicy, termsOfService } from './data/privacyRules'
+import { privacyPolicy, termsOfService } from '@/data/privacyRules'
 
 const App: React.FC = () => {
   return (

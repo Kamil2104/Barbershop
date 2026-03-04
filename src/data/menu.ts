@@ -1,4 +1,4 @@
-import type { MenuItem } from "../types/navigation"
+import type { MenuItem } from "@/types/navigation"
 
 export const menuItems: MenuItem[] = [
   { label: "About", href: "#about" },

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type{ Image } from '../../types/images'
+import type{ Image } from '@/types/images'
 
 interface PhotoProps {
     index: number,

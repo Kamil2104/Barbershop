@@ -1,4 +1,4 @@
-import type { OfferingItem } from "../types/service"
+import type { OfferingItem } from "@/types/service"
 
 export const offerings: OfferingItem[] = [
     // HAIRCUT

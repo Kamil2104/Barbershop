@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link as RouterLink } from 'react-router-dom'
 
-import { scrollTo } from '../../utils/scrollTo'
+import { scrollTo } from '@/utils/scrollTo'
 
 interface SmartLinkProps {
   href: string

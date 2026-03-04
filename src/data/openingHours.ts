@@ -1,4 +1,4 @@
-import type { OpenHours } from "../types/openHours"
+import type { OpenHours } from "@/types/openHours"
 
 export const openingHours: OpenHours[]  = [
     {day: "Mon - Fri", hours: "10:00 - 21:00"},

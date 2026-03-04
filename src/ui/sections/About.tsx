@@ -1,13 +1,13 @@
 import React from 'react'
 
-import BigTitle from '../components/BigTitle'
-import SmallTitle from '../components/SmallTitle'
-import BigParagraph from '../components/BigParagraph'
-import SmallParagraph from '../components/SmallParagraph'
-import AnchorButton from '../components/AnchorButton'
-import Section from '../layout/Section'
+import BigTitle from '@/ui/components/BigTitle'
+import SmallTitle from '@/ui/components/SmallTitle'
+import BigParagraph from '@/ui/components/BigParagraph'
+import SmallParagraph from '@/ui/components/SmallParagraph'
+import AnchorButton from '@/ui/components/AnchorButton'
+import Section from '@/ui/layout/Section'
 
-import barbershopInterior from '../../assets/barbershop.svg'
+import barbershopInterior from '@/assets/barbershop.svg'
 
 interface USP {
   title: string,

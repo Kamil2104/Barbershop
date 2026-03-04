@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type { OpenHours } from '../../types/openHours'
+import type { OpenHours } from '@/types/openHours'
 
 const ListItem: React.FC<{ item: OpenHours }> = ({ item }) => {
   return (

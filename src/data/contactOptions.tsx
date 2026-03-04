@@ -1,6 +1,6 @@
 import { FiFacebook, FiInstagram, FiMail, FiPhone } from 'react-icons/fi'
 
-import type { ContactOption } from '../types/contact'
+import type { ContactOption } from '@/types/contact'
 
 export const contactOptions: ContactOption[] = [
     {

@@ -1,4 +1,4 @@
-import type { PolicyItem } from "../types/privacy&terms"
+import type { PolicyItem } from "@/types/privacy&terms"
 
 export const privacyPolicy: PolicyItem[] = [
     {

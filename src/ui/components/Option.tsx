@@ -1,7 +1,7 @@
 import React from 'react'
 
-import type { MenuItem } from '../../types/navigation'
-import AnchorButton from './AnchorButton'
+import type { MenuItem } from '@/types/navigation'
+import AnchorButton from '@/ui/components/AnchorButton'
 
 interface OptionProps {
   item: MenuItem

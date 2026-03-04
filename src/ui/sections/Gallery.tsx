@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-import useServicesItemsLimit from '../../hooks/useServicesItemsLimit'
+import useServicesItemsLimit from '@/hooks/useServicesItemsLimit'
 
-import Section from '../layout/Section'
-import BigTitle from '../components/BigTitle'
-import Photo from '../components/Photo'
+import Section from '@/ui/layout/Section'
+import BigTitle from '@/ui/components/BigTitle'
+import Photo from '@/ui/components/Photo'
 
-import { images }from '../../data/galleryImages'
+import { images }from '@/data/galleryImages'
 
-import type { Image } from '../../types/images'
+import type { Image } from '@/types/images'
 
 const Gallery: React.FC = () => {
   const [expanded, setExpanded] = useState(false)

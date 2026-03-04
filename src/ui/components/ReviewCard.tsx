@@ -3,7 +3,7 @@ import React from 'react'
 import SmallTitle from './SmallTitle'
 import SmallParagraph from './SmallParagraph'
 
-import type { Review } from '../../types/review'
+import type { Review } from '@/types/review'
 
 const ReviewCard: React.FC<Review> = ({ author, rating, text, date }) => {
   return (

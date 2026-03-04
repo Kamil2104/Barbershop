@@ -2,12 +2,12 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-import Section from '../ui/layout/Section'
-import BigTitle from '../ui/components/BigTitle'
-import BigParagraph from '../ui/components/BigParagraph'
-import SmallTitle from '../ui/components/SmallTitle'
+import Section from '@/ui/layout/Section'
+import BigTitle from '@/ui/components/BigTitle'
+import BigParagraph from '@/ui/components/BigParagraph'
+import SmallTitle from '@/ui/components/SmallTitle'
 
-import type { PolicyItem } from '../types/privacy&terms'
+import type { PolicyItem } from '@/types/privacy&terms'
 
 interface PrivacyTermsProps {
   title: string,

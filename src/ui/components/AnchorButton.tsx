@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SmartLink from './SmartLink'
+import SmartLink from '@/ui/components/SmartLink'
 
 interface AnchorButtonProps {
     text: string

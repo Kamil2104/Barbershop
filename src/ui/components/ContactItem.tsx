@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type { ContactOption } from '../../types/contact'
+import type { ContactOption } from '@/types/contact'
 
 const ContactItem: React.FC<{ item: ContactOption }> = ({ item }) => {
   return (

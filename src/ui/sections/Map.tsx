@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Section from '../layout/Section'
-import BigTitle from '../components/BigTitle'
+import Section from '@/ui/layout/Section'
+import BigTitle from '@/ui/components/BigTitle'
 
 const Map: React.FC = () => {
   return (
