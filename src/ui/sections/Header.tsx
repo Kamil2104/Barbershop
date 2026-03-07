@@ -87,7 +87,7 @@ const NavContent = ({ items, onItemClick, layoutClassName }: NavContentProps) =>
         onClick={() => {
           onItemClick?.()
         }}
-        className='px-5 py-2 bg-zinc-900 text-zinc-100 text-sm font-medium hover:bg-zinc-700 transition-colors duration-200'
+        className='px-5 py-2 bg-zinc-900 text-zinc-100 text-sm font-medium lg:hover:bg-zinc-700 lg:transition-colors lg:duration-200'
       />
     </div>
   )

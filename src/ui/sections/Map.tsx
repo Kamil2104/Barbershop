@@ -4,7 +4,7 @@ import Typography from '@/ui/components/Typography'
 const Map = () => {
   return (
     <Section id="location" background='bg-surface-primary' className="pb-12! md:pb-14! lg:pb-20!">
-        <Typography variant="h1" className='text-text-primary'>
+        <Typography variant="h1" className='text-text-primary mb-4 md:mb-6'>
           Find us
         </Typography>
 

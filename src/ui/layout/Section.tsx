@@ -17,8 +17,8 @@ const Section = ({
     <section id={id} className={`
         w-full
         px-10 md:px-15 lg:px-20
-        pt-12 md:pt-14 lg:pt-20
-        pb-6 md:pb-7 lg:pb-10
+        pt-6 md:pt-10 lg:pt-12
+        pb-2 md:pb-7 lg:pb-10
         ${background}
         ${className ?? ''}`
     }>

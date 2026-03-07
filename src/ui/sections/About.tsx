@@ -2,8 +2,6 @@ import Typography from '@/ui/components/Typography'
 import AnchorButton from '@/ui/components/AnchorButton'
 import Section from '@/ui/layout/Section'
 
-import barbershopInterior from '@/assets/barbershop.svg'
-
 interface USP {
   title: string,
   description: string
@@ -20,7 +18,7 @@ const About = () => {
 
   return (
     <Section id='about' background="bg-surface-primary">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
         <div>
           <Typography variant="h1" className='text-text-primary'>
             About Us
@@ -50,20 +48,20 @@ const About = () => {
             ))}
           </div>
 
-          <div className="mt-10">
+          <div className="mt-6 md:mt-8 lg:mt-10">
             <AnchorButton
               text='Book Your Visit'
               href='https://booksy.com/pl-pl?gad_source=1&gad_campaignid=11490709833&gbraid=0AAAAADE3ZKsAEuOjtBhuOsQlGGFGAGbK4&gclid=CjwKCAiA-__MBhAKEiwASBmsBBWdmlTccRnmid2qaNU5pqVLznIT7ZEJpwu4BYm2G7pPeubrcQapghoCo6EQAvD_BwE#ba_s=seo'
-              className='inline-block px-8 py-3 bg-surface-inverted text-text-inverted text-sm font-semibold hover:bg-zinc-700'
+              className='inline-block px-6 md:px-8 py-2.5 md:py-3 bg-surface-inverted text-text-inverted text-sm font-semibold lg:hover:bg-zinc-700'
             />
           </div>
         </div>
 
-        <div className="relative w-full h-auto overflow-hidden rounded-lg shadow-lg self-center flex items-center">
+        <div className="flex justify-center items-center relative w-full h-auto overflow-hidden self-center">
           <img
-            src={barbershopInterior}
+            src="https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg"
             alt="Barbershop interior"
-            className="w-full h-full object-cover"
+            className="w-3xl h-auto grayscale rounded-lg shadow-lg "
           />
         </div>
       </div>

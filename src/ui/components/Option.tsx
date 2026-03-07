@@ -20,8 +20,8 @@ const Option = ({ item, onClick }: OptionProps) => {
         text-zinc-900
         py-0
         px-0
-        transition-all duration-200
-        hover:text-zinc-600
+        lg:transition-all lg:duration-200
+        lg:hover:text-zinc-600
         lg:after:content-['']
         lg:after:absolute
         lg:after:left-0

@@ -12,7 +12,7 @@ const AnchorButton= ({ text, href, onClick, className }: AnchorButtonProps) => {
     <SmartLink
       href={href}
       onClick={onClick}
-      className={`uppercase tracking-wide rounded-md transition-all duration-300 cursor-pointer flex items-center justify-center ${className ?? ''}`}
+      className={`uppercase tracking-wide rounded-md lg:transition-all lg:duration-300 cursor-pointer flex items-center justify-center ${className ?? ''}`}
     >
       {text}
     </SmartLink>

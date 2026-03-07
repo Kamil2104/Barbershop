@@ -8,7 +8,7 @@ const Service = (offer : OfferingItem) => {
   return (
     <div
       key={offer.name}
-      className="group relative bg-surface-secondary rounded-2xl p-5 md:p-6 lg:p-8 transition-all duration-300 hover:-translate-y-2"
+      className="group relative bg-surface-secondary rounded-2xl p-5 md:p-6 lg:p-8 lg:transition-all lg:duration-300 lg:hover:-translate-y-2"
     >
       <div className="flex flex-col h-full justify-between">
 
@@ -33,7 +33,7 @@ const Service = (offer : OfferingItem) => {
         </div>
       </div>
 
-      <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-text-primary transition-colors duration-300 pointer-events-none" />
+      <div className="absolute inset-0 rounded-2xl border border-transparent lg:group-hover:border-text-primary lg:transition-colors lg:duration-300 pointer-events-none" />
     </div>
   )
 }

@@ -1,4 +1,3 @@
-// src/hooks/useServicesItemsLimit.test.ts
 import { renderHook, act } from '@testing-library/react';
 import { describe, it, expect, beforeEach } from 'vitest';
 
@@ -20,17 +19,6 @@ describe('useServicesItemsLimit', () => {
 
     act(() => {
       window.innerWidth = 800;
-      window.dispatchEvent(new Event('resize'));
-    });
-
-    expect(result.current).toBe(4);
-  });
-
-  it('should return limit of 4 for gallery on mobile devices', () => {
-    const { result } = renderHook(() => useServicesItemsLimit({ section: 'gallery' }));
-
-    act(() => {
-      window.innerWidth = 500;
       window.dispatchEvent(new Event('resize'));
     });
 

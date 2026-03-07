@@ -12,7 +12,7 @@ const Reviews= () => {
   return (
     <Section id="reviews" background="bg-surface-primary">
       <div className="mx-auto relative">
-        <div className="relative flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 md:gap-6 mb-8 md:mb-12 lg:mb-16">
+        <div className="relative flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 md:gap-6 mb-4 md:mb-12 lg:mb-16">
           <div className="max-w-2xl">
 
             {/* Minimalist Badge */}
@@ -37,15 +37,16 @@ const Reviews= () => {
               rel="noopener noreferrer"
               className="
                 inline-block
-                px-4 lg:px-6
-                py-2 lg:py-3
+                px-3.5 md:px-4 lg:px-6
+                py-1.5 md:py-2 lg:py-3
+                mb-1 md:mb-0
                 border border-text-pr imary
                 text-sm md:text-base lg:text-xl
                 text-text-primary
                 font-medium
                 rounded-md
-                transition-colors duration-200
-                hover:bg-text-primary hover:text-white
+                lg:transition-colors lg:duration-200
+                lg:hover:bg-text-primary lg:hover:text-white
                 self-start md:self-center
               "
             >
@@ -54,7 +55,7 @@ const Reviews= () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 md:gap-0 lg:gap-10">
           {reviews.map((rev: Review) => (
             <ReviewCard
               key={rev.author}

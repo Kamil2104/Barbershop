@@ -17,15 +17,14 @@ const Footer =() => {
   return (
     <footer>
       <Section id='contact' background='bg-surface-inverted' className='pb-0!'>
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-center md:gap-8 gap-12 pb-12 md:pb-14 lg:pb-20">
+          <div className="flex flex-col md:flex-row justify-center gap-8 lg:gap-12 pb-8 md:pb-12 lg:pb-20">
 
             <div className="flex flex-col w-full md:w-1/2">
               <Typography variant="h2" className='text-text-inverted uppercase tracking-wider mt-0!'>
                 Modern Barbershop
               </Typography>
 
-              <Typography variant="p-lg" className='text-text-muted leading-relaxed'>
+              <Typography variant="p-lg" className='text-text-muted leading-relaxed mt-2! md:mt-4!'>
                 Precision cuts. Premium grooming. A refined atmosphere crafted for modern gentlemen who value detail and confidence.
               </Typography>
 
@@ -34,42 +33,43 @@ const Footer =() => {
                   href='https://booksy.com/pl-pl?gad_source=1&gad_campaignid=11490709833&gbraid=0AAAAADE3ZKsAEuOjtBhuOsQlGGFGAGbK4&gclid=CjwKCAiA-__MBhAKEiwASBmsBBWdmlTccRnmid2qaNU5pqVLznIT7ZEJpwu4BYm2G7pPeubrcQapghoCo6EQAvD_BwE#ba_s=seo'
                   target='_blank'
                   rel="noopener noreferrer"
-                  className="inline-block border border-border-subtle mt-4 px-4 lg:px-5 py-2.5 lg:py-3 text-xs lg:text-sm uppercase tracking-widest text-text-inverted hover:bg-text-inverted hover:text-surface-inverted transition-all duration-300"
+                  className="inline-block border border-border-subtle mt-4 px-4 lg:px-5 py-2.5 lg:py-3 text-xs lg:text-sm uppercase tracking-widest text-text-inverted lg:hover:bg-text-inverted lg:hover:text-surface-inverted lg:transition-all lg:duration-300"
                 >
                   Book Appointment
                 </a>
               </div>
             </div>
 
-            <div className="flex flex-col-reverse md:flex-row justify-between md:justify-end items-start gap-12 sm:gap-10 md:gap-20 w-full md:w-1/2">
-
-                <div className="w-full md:w-fit space-y-3 lg:space-y-4">
+            <div className="flex flex-col md:flex-row justify-between md:justify-end items-start gap-8 md:gap-20 w-full md:w-1/2">
+              <div className='flex flex-row flex-start md:justify-end gap-8 md:gap-12 lg:gap-16 w-full'>
+                <div className="w-fit space-y-3 lg:space-y-4">
                   <Typography variant="h4" className='text-text-inverted uppercase tracking-wider'>
                     Contact
                   </Typography>
 
-                  <ul className="flex flex-row md:flex-col flex-wrap gap-6 md:gap-5">
+                  <ul className="flex flex-col flex-wrap gap-6 md:gap-4">
                     {contactOptions.map((option: ContactOption) => (
                       <ContactItem key={option.text} {...option} />
                     ))}
                   </ul>
                 </div>
 
-                <div className="w-full md:w-fit space-y-3 lg:space-y-4">
+                <div className="w-fit space-y-3 lg:space-y-4">
                   <Typography variant="h4" className='text-text-inverted uppercase tracking-wider'>
                     Opening Hours
                   </Typography>
 
-                  <ul className="flex flex-row md:flex-col flex-wrap justify-between md:justify-start gap-6 md:gap-5 text-text-muted text-sm w-full md:w-auto">
+                  <ul className="flex flex-col flex-wrap md:justify-start gap-4 md:gap-4 text-text-muted text-sm w-full md:w-auto">
                     {openingHours.map((option: OpenHours) => (
                       <ListItem key={option.day} {...option} />
                     ))}
                   </ul>
                 </div>
+              </div>
             </div>
           </div>
 
-          <div className="border-t border-border-subtle py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="border-t border-text-muted py-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-text-muted tracking-wider text-center">
               © {new Date().getFullYear()} Modern Barbershop. All rights reserved.
             </p>
@@ -79,15 +79,13 @@ const Footer =() => {
                 <SmartLink
                   key={link.label}
                   href={link.href}
-                  className="hover:text-text-inverted transition-colors cursor-pointer"
+                  className="lg:hover:text-text-inverted lg:transition-colors lg:cursor-pointer"
                 >
                   {link.label}
                 </SmartLink>
               ))}
             </div>
           </div>
-
-        </div>
       </Section>
     </footer>
   )

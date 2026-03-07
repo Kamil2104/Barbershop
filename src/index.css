@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@layer base {
+  body {
+    @apply bg-surface-primary text-text-primary;
+  }
+}
+
 @theme {
     --color-surface-primary: #f4f4f5;
     --color-surface-inverted: #18181b;

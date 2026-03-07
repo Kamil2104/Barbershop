@@ -9,7 +9,7 @@ interface TypographyProps {
 const Typography = ({ variant, children, className = '' }: TypographyProps) => {
   const styles = {
     // Big title
-    h1: "text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 md:mb-6 lg:mb-10",
+    h1: "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 md:mb-6 lg:mb-10",
     // Medium title
     h2: "text-2xl md:text-3xl lg:text-4xl mt-4 md:mt-0 font-semibold tracking-tight",
     // Small title

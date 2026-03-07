@@ -5,6 +5,7 @@ import useServicesItemsLimit from '@/hooks/useServicesItemsLimit'
 import Typography from '@/ui/components/Typography'
 import Service from '@/ui/components/Service'
 import Section from '@/ui/layout/Section'
+import ExpandButton from '@/ui/components/ExpandButton'
 
 import { offerings } from '@/data/offerings'
 
@@ -42,38 +43,29 @@ const Services = () => {
             return (
               <div key={type}>
 
-                {/* Minimal Section Header */}
                 <div>
                   <Typography variant="h2" className='text-text-primary'>
                     {type}
                   </Typography>
-                  <div className="mt-2 mb-4 h-[2px] w-16 bg-text-primary" />
+                  <div className="mt-2 mb-0 md:mb-4 h-[2px] w-16 bg-text-primary" />
                 </div>
 
-                {/* Modern Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-5">
                   {visibleOffers.map((o: OfferingItem) => (
                     <Service key={o.name} {...o} />
                   ))}
                 </div>
 
-                <div className="mt-6 flex justify-center">
-                  <button
+                <div className="mt-2 md:mt-4 lg:mt-6 flex justify-center">
+                  <ExpandButton
+                    isExpanded={isExpanded}
                     onClick={() =>
                       setExpanded((prev) => ({
                         ...prev,
                         [type]: !prev[type],
-                      }))
-                    }
-                    className="group inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 mb-6 md:mb-3 lg:mb-0 rounded-full border border-border-subtle bg-surface-secondary text-text-primary text-xs lg:text-sm font-semibold uppercase tracking-wider transition-colors duration-300 hover:bg-text-primary/5 hover:border-text-primary cursor-pointer"
-                  >
-                    <span>{isExpanded ? 'Show Less' : 'Show More'}</span>
-                    <span
-                      className={`transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
-                    >
-                      ↓
-                    </span>
-                  </button>
+                      }))}
+                    className='px-4 py-2 md:px-6 md:py-3 mb-4'
+                  />
                 </div>
               </div>
             )

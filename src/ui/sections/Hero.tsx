@@ -32,14 +32,14 @@ const Hero = () => {
           <AnchorButton
             text="Book Appointment"
             href='https://booksy.com/pl-pl?gad_source=1&gad_campaignid=11490709833&gbraid=0AAAAADE3ZKsAEuOjtBhuOsQlGGFGAGbK4&gclid=CjwKCAiA-__MBhAKEiwASBmsBBWdmlTccRnmid2qaNU5pqVLznIT7ZEJpwu4BYm2G7pPeubrcQapghoCo6EQAvD_BwE#ba_s=seo'
-            className="px-8 py-3 bg-surface-primary text-text-primary text-sm md:text-base font-semibold hover:bg-zinc-300"
+            className="px-8 py-3 bg-surface-primary text-text-primary text-sm md:text-base font-semibold lg:hover:bg-zinc-300"
           />
 
           <AnchorButton
             text="View Services"
             href="#services"
             onClick={() => scrollTo('services')}
-            className="px-8 py-3 border border-surface-primary text-text-inverted text-sm md:text-base font-semibold hover:bg-surface-primary hover:text-text-primary"
+            className="px-8 py-3 border border-surface-primary text-text-inverted text-sm md:text-base font-semibold lg:hover:bg-surface-primary lg:hover:text-text-primary"
           />
         </div>
       </div>

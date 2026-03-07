@@ -16,11 +16,7 @@ const useServicesItemsLimit = ({ section }: UseServicesItemsLimitProps) => {
         setItemsToShow(4)
       } else {
         // sm:
-        if (section === 'gallery' && width < 768) {
-          setItemsToShow(4)
-        } else {
-          setItemsToShow(3)
-        }
+        setItemsToShow(3)
       }
     }
 
