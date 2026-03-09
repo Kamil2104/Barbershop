@@ -29,9 +29,9 @@ const Gallery = () => {
 
       <div className="mt-6 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {visiblePhotos.map((img: Image) => (
-          <div key={img.src} className="overflow-hidden rounded-xl group">
+          <div key={img.src} className="overflow-hidden rounded-xl group h-[200px] md:h-[300px] lg:h-[400px]">
             <AnimatedImage
-              className="h-[200px] md:h-[300px] lg:h-[400px]"
+              className=""
               {...img}
             />
           </div>

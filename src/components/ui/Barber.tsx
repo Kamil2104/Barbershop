@@ -9,7 +9,7 @@ const Barber = ({ image, name, role, description }: Employee) => {
   return (
     <div className="group flex flex-col h-fit w-4/5 max-w-[300px] md:max-w-[350px] lg:max-w-[400px] md:w-full bg-surface-secondary rounded-3xl overflow-hidden border border-transparent lg:hover:border-text-primary/20 lg:transition-all lg:duration-500 lg:hover:shadow-2xl lg:hover:-translate-y-2">
       <div className="relative aspect-3/4 overflow-hidden">
-        <AnimatedImage src={image} alt={`Our barber: ${name}`} />
+        <AnimatedImage src={image} alt={`Our barber: ${name}`} className="object-top" />
         <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500" />
       </div>
 

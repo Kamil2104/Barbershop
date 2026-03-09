@@ -5,7 +5,7 @@ const AnimatedImage = ({ src, alt, className }: Image) => {
     <img
       src={src}
       alt={alt}
-      className={`w-full h-full object-cover object-top lg:grayscale lg:group-hover:grayscale-0 lg:transition-all lg:duration-700 lg:group-hover:scale-105 ${className ?? ""}`}
+      className={`w-full h-full object-cover lg:grayscale lg:group-hover:grayscale-0 lg:transition-all lg:duration-700 lg:group-hover:scale-105 ${className ?? ""}`}
       loading="lazy"
     />
   );
