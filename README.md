@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+# Modern Barbershop Landing Page 💈
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, high-performance landing page for a modern barbershop, built with a "Minimalist Professional" aesthetic. This project focuses on clean architecture, type safety, and a seamless user experience across all devices.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## React Compiler
+- **Dynamic Booking Integration**: Seamless redirection to the Booksy platform for appointment management.
+- **Responsive Team Showcase**: A dedicated section for barbers with dynamic pagination that adjusts the number of items based on screen size (Mobile/Tablet/Desktop).
+- **Intelligent Service Catalog**: Categorized service lists (Haircuts, Beard Care, Full Grooming) with "Show More" functionality to keep the UI clean.
+- **Smart Navigation**: A custom header that hides on scroll-down and reappears on scroll-up, combined with an animated smooth-scroll utility.
+- **Legal Compliance**: Built-in Privacy Policy and Terms of Service pages with a persistent, animated Cookie Banner that stores user consent in `localStorage`.
+- **Performance Optimized**: Features lazy loading for images and code-splitting for routes to ensure fast load times.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Framework**: React 18 + Vite.
+- **Styling**: Tailwind CSS v4 using modern CSS variables and a centralized theme configuration.
+- **State Management**: React Hooks (useState, useMemo, useEffect, useRef).
+- **Routing**: React Router DOM for Single Page Application (SPA) navigation.
+- **Testing**: Vitest and React Testing Library for unit and component testing.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📂 Project Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The project follows the **Separation of Concerns** principle to ensure scalability:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- `src/data/`: Centralized "Single Source of Truth" for all content (services, team, reviews, legal text).
+- `src/ui/components/`: Atomic UI elements like `Typography`, `SmartLink`, and `AnchorButton`.
+- `src/ui/sections/`: Large, content-heavy blocks that compose the landing page.
+- `src/hooks/`: Custom business logic (e.g., viewport detection, scroll behavior).
+- `src/types/`: Centralized TypeScript interfaces and types for better maintainability.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚦 Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
+- Node.js (Latest LTS recommended)
+- npm or yarn
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/your-username/modern-barbershop.git](https://github.com/your-username/modern-barbershop.git)
+2. Install dependencies:
+   ```bash
+   npm install
+3. Start the development server:
+   ```bash
+   npm run dev
