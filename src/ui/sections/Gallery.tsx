@@ -1,11 +1,11 @@
 import { useState, useMemo } from "react";
 
-import useServicesItemsLimit from "@/hooks/useServicesItemsLimit";
+import useScreenSize from "@/hooks/useScreenSize";
 
 import Section from "@/ui/layout/Section";
 import Typography from "@/ui/components/Typography";
 import Photo from "@/ui/components/Photo";
-import ExpandButton from "@/ui/components/ExpandButton";
+import ChangeViewButton from "@/ui/components/ChangeViewButton";
 
 import { images } from "@/data/galleryImages";
 
@@ -14,7 +14,7 @@ import type { Image } from "@/types/images";
 const Gallery = () => {
   const [expanded, setExpanded] = useState(false);
 
-  const itemsToShow = useServicesItemsLimit({ section: "gallery" });
+  const itemsToShow = useScreenSize() === 'md' ? 4 : 3
 
   const visiblePhotos = useMemo(
     () => (expanded ? images : images.slice(0, itemsToShow)),
@@ -34,8 +34,9 @@ const Gallery = () => {
       </div>
 
       <div className="flex justify-center w-full mt-7 md:mt-10">
-        <ExpandButton
-          isExpanded={expanded}
+        <ChangeViewButton
+          text={expanded ? "Show Less" : "Show More"}
+          iconRotation={expanded ? 'rotate-180' : ''}
           onClick={() =>
             setExpanded(prev => !prev)
           }

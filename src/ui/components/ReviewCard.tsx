@@ -6,7 +6,7 @@ import type { Review } from '@/types/review'
 
 const ReviewCard = ({ author, rating, text, date }: Review) => {
   return (
-    <div className="flex flex-col h-full bg-surface-secondary p-3 md:p-4 lg:p-8 rounded-2xl border border-transparent lg:hover:border-text-primary lg:transition-all lg:duration-300">
+    <div className="flex flex-col h-full bg-surface-secondary p-3 md:p-4 lg:p-8 rounded-2xl border border-transparent lg:hover:border-text-primary lg:hover:-translate-y-2 lg:transition-all lg:duration-300">
       <div className="flex justify-between items-start mb-2 lg:mb-4">
         <div>
           <Typography variant="h4" className="text-text-primary text-sm">{author}</Typography>

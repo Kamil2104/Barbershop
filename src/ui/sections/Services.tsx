@@ -1,11 +1,11 @@
 import { useState, useMemo } from 'react'
 
-import useServicesItemsLimit from '@/hooks/useServicesItemsLimit'
+import useScreenSize from '@/hooks/useScreenSize'
 
 import Typography from '@/ui/components/Typography'
 import Service from '@/ui/components/Service'
 import Section from '@/ui/layout/Section'
-import ExpandButton from '@/ui/components/ExpandButton'
+import ChangeViewButton from '@/ui/components/ChangeViewButton'
 
 import { offerings } from '@/data/offerings'
 
@@ -14,7 +14,7 @@ import type { OfferingItem } from '@/types/service'
 const Services = () => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
 
-  const itemsToShow = useServicesItemsLimit({ section: 'services' })
+  const itemsToShow = useScreenSize() === 'md' ? 4 : 3
 
   const groupedOfferings = useMemo(() => {
     return offerings.reduce<Record<string, OfferingItem[]>>((acc, offering) => {
@@ -57,8 +57,9 @@ const Services = () => {
                 </div>
 
                 <div className="mt-2 md:mt-4 lg:mt-6 flex justify-center">
-                  <ExpandButton
-                    isExpanded={isExpanded}
+                  <ChangeViewButton
+                    text={isExpanded ? "Show Less" : "Show More"}
+                    iconRotation={isExpanded ? 'rotate-180' : ''}
                     onClick={() =>
                       setExpanded((prev) => ({
                         ...prev,
