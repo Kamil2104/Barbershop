@@ -7,7 +7,7 @@ import Service from '@/ui/components/Service'
 import Section from '@/ui/layout/Section'
 import ChangeViewButton from '@/ui/components/ChangeViewButton'
 
-import { offerings } from '@/data/offerings'
+import { SHOP_OFFERINGS } from '@/data/offerings'
 
 import type { OfferingItem } from '@/types/service'
 
@@ -17,7 +17,7 @@ const Services = () => {
   const itemsToShow = useScreenSize() === 'md' ? 4 : 3
 
   const groupedOfferings = useMemo(() => {
-    return offerings.reduce<Record<string, OfferingItem[]>>((acc, offering) => {
+    return SHOP_OFFERINGS.reduce<Record<string, OfferingItem[]>>((acc, offering) => {
       if (!acc[offering.type]) {
         acc[offering.type] = []
       }

@@ -1,6 +1,6 @@
 import type { PolicyItem } from "@/types/privacy&terms"
 
-export const privacyPolicy: PolicyItem[] = [
+export const PRIVACY_POLICY: PolicyItem[] = [
     {
         title: "1. Information We Collect",
         content: "We collect information you provide directly to us when booking an appointment via Booksy, contacting us via email, or following us on social media. This may include your name, phone number, and email address."
@@ -19,7 +19,7 @@ export const privacyPolicy: PolicyItem[] = [
     },
 ]
 
-export const termsOfService: PolicyItem[] = [
+export const TERMS_OF_SERVICE: PolicyItem[] = [
   {
     title: "1. Appointments",
     content: "All appointments are scheduled via our booking partner, Booksy. We kindly ask that you arrive on time. If you are more than 15 minutes late, we may need to reschedule your visit to a different time."

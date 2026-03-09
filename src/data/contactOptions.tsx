@@ -2,7 +2,7 @@ import { FiFacebook, FiInstagram, FiMail, FiPhone } from 'react-icons/fi'
 
 import type { ContactOption } from '@/types/contact'
 
-export const contactOptions: ContactOption[] = [
+export const CONTACT_OPTIONS: ContactOption[] = [
     {
       logo: <FiFacebook />,
       link: 'https://facebook.com/modernbarbershop123',

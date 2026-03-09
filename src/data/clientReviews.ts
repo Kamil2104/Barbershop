@@ -1,6 +1,6 @@
 import type { Review } from "@/types/review"
 
-export const reviews: Review[] = [
+export const CLIENT_REVIEWS: Review[] = [
     {
       author: "James Wilson",
       rating: 5,

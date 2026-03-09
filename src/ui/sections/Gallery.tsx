@@ -7,7 +7,7 @@ import Typography from "@/ui/components/Typography";
 import Photo from "@/ui/components/Photo";
 import ChangeViewButton from "@/ui/components/ChangeViewButton";
 
-import { images } from "@/data/galleryImages";
+import { SHOP_IMAGES } from "@/data/galleryImages";
 
 import type { Image } from "@/types/images";
 
@@ -17,7 +17,7 @@ const Gallery = () => {
   const itemsToShow = useScreenSize() === 'md' ? 4 : 3
 
   const visiblePhotos = useMemo(
-    () => (expanded ? images : images.slice(0, itemsToShow)),
+    () => (expanded ? SHOP_IMAGES : SHOP_IMAGES.slice(0, itemsToShow)),
     [expanded, itemsToShow],
   );
 

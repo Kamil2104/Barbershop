@@ -1,6 +1,6 @@
 import type { Image } from "@/types/images";
 
-export const images: Image[] = [
+export const SHOP_IMAGES: Image[] = [
     {
       src: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80',
       alt: 'Close-up of a barber using a straight razor for precise beard shaping'

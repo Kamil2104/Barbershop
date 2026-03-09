@@ -1,6 +1,6 @@
 import { FiStar } from 'react-icons/fi'
 
-import { reviews } from '@/data/clientReviews'
+import { CLIENT_REVIEWS } from '@/data/clientReviews'
 
 import type { Review } from '@/types/review'
 
@@ -56,7 +56,7 @@ const Reviews= () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 md:gap-0 lg:gap-10">
-          {reviews.map((rev: Review) => (
+          {CLIENT_REVIEWS.map((rev: Review) => (
             <ReviewCard
               key={rev.author}
               {...rev}

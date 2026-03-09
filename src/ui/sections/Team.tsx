@@ -6,7 +6,7 @@ import Typography from "@/ui/components/Typography"
 import Barber from "@/ui/components/Barber"
 import ChangeViewButton from "../components/ChangeViewButton"
 
-import { barbers } from "@/data/employees"
+import { OUR_BARBERS } from "@/data/employees"
 
 import type { Employee } from "@/types/employee"
 import type { ScreenSize } from "@/types/screen"
@@ -25,12 +25,12 @@ const Team = () => {
 
   const start = currentIndex * itemsPerPage;
   const end = start + itemsPerPage;
-  const slicedBarbers = barbers.slice(start, end);
+  const slicedBarbers = OUR_BARBERS.slice(start, end);
 
   const handleNext = () => {
     setCurrentIndex((prev) => {
       const nextIndex = prev + 1;
-      return (nextIndex * itemsPerPage >= barbers.length) ? 0 : nextIndex;
+      return (nextIndex * itemsPerPage >= OUR_BARBERS.length) ? 0 : nextIndex;
     });
   };
 
@@ -47,7 +47,7 @@ const Team = () => {
           </div>
 
           <div className="text-text-muted text-xs font-mono uppercase tracking-widest">
-            Page {currentIndex + 1} / {Math.ceil(barbers.length / itemsPerPage)}
+            Page {currentIndex + 1} / {Math.ceil(OUR_BARBERS.length / itemsPerPage)}
           </div>
         </div>
 

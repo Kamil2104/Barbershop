@@ -1,9 +1,9 @@
 import Section from '@/ui/layout/Section'
 import ContactItem from '@/ui/components/ContactItem'
 
-import { contactOptions } from '@/data/contactOptions'
-import { openingHours } from '@/data/openingHours'
-import { footerLinks } from '@/data/menu'
+import { CONTACT_OPTIONS } from '@/data/contactOptions'
+import { OPENING_HOURS } from '@/data/openingHours'
+import { FOOTER_LINKS } from '@/data/menu'
 
 import type { ContactOption } from '@/types/contact'
 import type { OpenHours } from '@/types/openHours'
@@ -48,7 +48,7 @@ const Footer =() => {
                   </Typography>
 
                   <ul className="flex flex-col flex-wrap gap-6 md:gap-4">
-                    {contactOptions.map((option: ContactOption) => (
+                    {CONTACT_OPTIONS.map((option: ContactOption) => (
                       <ContactItem key={option.text} {...option} />
                     ))}
                   </ul>
@@ -60,7 +60,7 @@ const Footer =() => {
                   </Typography>
 
                   <ul className="flex flex-col flex-wrap md:justify-start gap-4 md:gap-4 text-text-muted text-sm w-full md:w-auto">
-                    {openingHours.map((option: OpenHours) => (
+                    {OPENING_HOURS.map((option: OpenHours) => (
                       <ListItem key={option.day} {...option} />
                     ))}
                   </ul>
@@ -75,7 +75,7 @@ const Footer =() => {
             </p>
 
             <div className="flex gap-6 text-xs text-text-muted uppercase tracking-widest">
-              {footerLinks.map((link: MenuItem) => (
+              {FOOTER_LINKS.map((link: MenuItem) => (
                 <SmartLink
                   key={link.label}
                   href={link.href}

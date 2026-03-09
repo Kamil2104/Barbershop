@@ -1,6 +1,6 @@
 import type { Employee } from "@/types/employee";
 
-export const barbers: Employee[] = [
+export const OUR_BARBERS: Employee[] = [
   {
     image: "https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?q=80&w=1000&auto=format&fit=crop",
     name: "James Wilcox",

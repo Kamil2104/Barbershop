@@ -1,6 +1,6 @@
 import type { MenuItem } from "@/types/navigation"
 
-export const menuItems: MenuItem[] = [
+export const MENU_ITEMS: MenuItem[] = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Gallery", href: "#gallery" },
@@ -9,7 +9,7 @@ export const menuItems: MenuItem[] = [
   { label: "Contact", href: "#contact" }
 ]
 
-export const footerLinks: MenuItem[] = [
+export const FOOTER_LINKS: MenuItem[] = [
   { label: 'Privacy', href: '/privacy' },
   { label: 'Terms', href: '/terms' },
 ]

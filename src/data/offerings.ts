@@ -1,6 +1,6 @@
 import type { OfferingItem } from "@/types/service"
 
-export const offerings: OfferingItem[] = [
+export const SHOP_OFFERINGS: OfferingItem[] = [
     // HAIRCUT
     { type: 'Haircut', name: 'Classic Haircut', price: 25, duration: 30, description: 'Traditional haircut with attention to detail, leaving you looking sharp and polished.' },
     { type: 'Haircut', name: 'Skin Fade', price: 30, duration: 40, description: 'Modern skin fade haircut with precise blending for a clean, contemporary look.' },

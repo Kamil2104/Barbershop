@@ -10,7 +10,7 @@ import Reviews from '@/ui/sections/Reviews'
 import Map from '@/ui/sections/Map'
 import Footer from '@/ui/sections/Footer'
 
-import { menuItems } from '@/data/menu'
+import { MENU_ITEMS } from '@/data/menu'
 
 const Home = () => {
   useEffect(() => {
@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-      <Header items={menuItems} />
+      <Header items={MENU_ITEMS} />
       <Hero />
       <About />
       <Team />
