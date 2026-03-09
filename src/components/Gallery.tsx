@@ -27,13 +27,13 @@ const Gallery = () => {
         Gallery
       </Typography>
 
-      <div className="mt-6 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mt-6 md:mt-12 flex flex-wrap justify-center gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
         {visiblePhotos.map((img: Image) => (
-          <div key={img.src} className="overflow-hidden rounded-xl group h-[200px] md:h-[300px] lg:h-[400px]">
-            <AnimatedImage
-              className=""
-              {...img}
-            />
+          <div
+            key={img.src}
+            className="overflow-hidden rounded-xl group w-[600px] md:w-auto h-[250px] md:h-[300px] lg:h-[400px]"
+          >
+            <AnimatedImage {...img} />
           </div>
         ))}
       </div>
