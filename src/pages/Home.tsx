@@ -9,6 +9,7 @@ import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
 import Map from "@/components/Map";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/ui/CookieBanner";
 
 import { MENU_ITEMS } from "@/data/menu";
 
@@ -28,6 +29,7 @@ const Home = () => {
       <Reviews />
       <Map />
       <Footer />
+      <CookieBanner />
     </>
   );
 };
