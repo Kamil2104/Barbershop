@@ -1,10 +1,10 @@
 import { useState } from "react";
 import useSceenSize from "@/hooks/useScreenSize";
 
-import Section from "@/ui/layout/Section";
-import Typography from "@/ui/components/Typography";
-import Barber from "@/ui/components/Barber";
-import ChangeViewButton from "../components/ChangeViewButton";
+import Section from "@/components/layout/Section";
+import Typography from "@/components/ui/Typography";
+import Barber from "@/components/ui/Barber";
+import ChangeViewButton from "@/components/ui/ChangeViewButton";
 
 import { OUR_BARBERS } from "@/data/employees";
 

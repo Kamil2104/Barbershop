@@ -4,9 +4,9 @@ import { CLIENT_REVIEWS } from "@/data/clientReviews";
 
 import type { Review } from "@/types/review";
 
-import Section from "@/ui/layout/Section";
-import Typography from "@/ui/components/Typography";
-import ReviewCard from "@/ui/components/ReviewCard";
+import Section from "@/components/layout/Section";
+import Typography from "@/components/ui/Typography";
+import ReviewCard from "@/components/ui/ReviewCard";
 
 const Reviews = () => {
   return (

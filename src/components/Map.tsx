@@ -1,5 +1,5 @@
-import Section from "@/ui/layout/Section";
-import Typography from "@/ui/components/Typography";
+import Section from "@/components/layout/Section";
+import Typography from "@/components/ui/Typography";
 
 const Map = () => {
   return (

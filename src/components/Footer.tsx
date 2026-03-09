@@ -1,5 +1,8 @@
-import Section from "@/ui/layout/Section";
-import ContactItem from "@/ui/components/ContactItem";
+import Section from "@/components/layout/Section";
+import ContactItem from "@/components/ui/ContactItem";
+import Typography from "@/components/ui/Typography";
+import SmartLink from "@/components/ui/SmartLink";
+import ListItem from "@/components/ui/ListItem";
 
 import { CONTACT_OPTIONS } from "@/data/contactOptions";
 import { OPENING_HOURS } from "@/data/openingHours";
@@ -8,10 +11,6 @@ import { FOOTER_LINKS } from "@/data/menu";
 import type { ContactOption } from "@/types/contact";
 import type { OpenHours } from "@/types/openHours";
 import type { MenuItem } from "@/types/navigation";
-
-import Typography from "@/ui/components/Typography";
-import SmartLink from "@/ui/components/SmartLink";
-import ListItem from "@/ui/components/ListItem";
 
 const Footer = () => {
   return (

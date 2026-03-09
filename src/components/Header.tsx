@@ -3,8 +3,8 @@ import { useHeaderVisibility } from "@/hooks/useHeaderVisibility";
 
 import type { MenuItem } from "@/types/navigation";
 
-import Option from "@/ui/components/Option";
-import AnchorButton from "@/ui/components/AnchorButton";
+import Option from "@/components/ui/Option";
+import AnchorButton from "@/components/ui/AnchorButton";
 
 import { scrollTo } from "@/utils/scrollTo";
 

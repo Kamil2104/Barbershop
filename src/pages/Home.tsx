@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 
-import Header from "@/ui/sections/Header";
-import Hero from "@/ui/sections/Hero";
-import About from "@/ui/sections/About";
-import Team from "@/ui/sections/Team";
-import Services from "@/ui/sections/Services";
-import Gallery from "@/ui/sections/Gallery";
-import Reviews from "@/ui/sections/Reviews";
-import Map from "@/ui/sections/Map";
-import Footer from "@/ui/sections/Footer";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Team from "@/components/Team";
+import Services from "@/components/Services";
+import Gallery from "@/components/Gallery";
+import Reviews from "@/components/Reviews";
+import Map from "@/components/Map";
+import Footer from "@/components/Footer";
 
 import { MENU_ITEMS } from "@/data/menu";
 

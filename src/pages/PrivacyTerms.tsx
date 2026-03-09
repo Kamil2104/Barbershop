@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import Section from "@/ui/layout/Section";
-import Typography from "@/ui/components/Typography";
+import Section from "@/components/layout/Section";
+import Typography from "@/components/ui/Typography";
 
 import type { PolicyItem } from "@/types/privacy&terms";
 

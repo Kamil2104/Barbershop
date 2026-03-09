@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 
-import Services from "@/ui/sections/Services";
+import Services from "@/components/Services";
 
 describe("Services Component", () => {
   it("renders section title", () => {

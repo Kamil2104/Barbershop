@@ -2,10 +2,10 @@ import { useState, useMemo } from "react";
 
 import useScreenSize from "@/hooks/useScreenSize";
 
-import Typography from "@/ui/components/Typography";
-import Service from "@/ui/components/Service";
-import Section from "@/ui/layout/Section";
-import ChangeViewButton from "@/ui/components/ChangeViewButton";
+import Typography from "@/components/ui/Typography";
+import Service from "@/components/ui/Service";
+import Section from "@/components/layout/Section";
+import ChangeViewButton from "@/components/ui/ChangeViewButton";
 
 import { SHOP_OFFERINGS } from "@/data/offerings";
 

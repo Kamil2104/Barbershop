@@ -1,7 +1,7 @@
 import { renderHook, act } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 
-import { useHeaderVisibility } from "../hooks/useHeaderVisibility";
+import { useHeaderVisibility } from "@/hooks/useHeaderVisibility";
 
 describe("useHeaderVisibility", () => {
   it("should be visible by default", () => {

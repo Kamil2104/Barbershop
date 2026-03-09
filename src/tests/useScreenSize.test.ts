@@ -1,7 +1,7 @@
 import { renderHook, act } from "@testing-library/react";
 import { describe, it, expect, beforeEach } from "vitest";
 
-import useSceenSize from "../hooks/useScreenSize";
+import useSceenSize from "@/hooks/useScreenSize";
 
 describe("useServicesItemsLimit", () => {
   beforeEach(() => {

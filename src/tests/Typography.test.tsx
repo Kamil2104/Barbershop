@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 
-import Typography from "@/ui/components/Typography";
+import Typography from "@/components/ui/Typography";
 
 describe("Typography Component", () => {
   it("renders h1 variant with correct tag", () => {

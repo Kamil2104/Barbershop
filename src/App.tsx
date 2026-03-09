@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Home = lazy(() => import("@/pages/Home"));
 const PrivacyTerms = lazy(() => import("@/pages/PrivacyTerms"));
-import Loader from "@/ui/components/Loader";
+import Loader from "@/components/ui/Loader";
 
 import { PRIVACY_POLICY, TERMS_OF_SERVICE } from "@/data/privacyRules";
 

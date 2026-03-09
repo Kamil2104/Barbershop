@@ -2,10 +2,10 @@ import { useState, useMemo } from "react";
 
 import useScreenSize from "@/hooks/useScreenSize";
 
-import Section from "@/ui/layout/Section";
-import Typography from "@/ui/components/Typography";
-import ChangeViewButton from "@/ui/components/ChangeViewButton";
-import AnimatedImage from "../components/AnimatedImage";
+import Section from "@/components/layout/Section";
+import Typography from "@/components/ui/Typography";
+import ChangeViewButton from "@/components/ui/ChangeViewButton";
+import AnimatedImage from "@/components/ui/AnimatedImage";
 
 import { SHOP_IMAGES } from "@/data/galleryImages";
 

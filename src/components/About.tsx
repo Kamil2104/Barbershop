@@ -1,6 +1,6 @@
-import Typography from "@/ui/components/Typography";
-import AnchorButton from "@/ui/components/AnchorButton";
-import Section from "@/ui/layout/Section";
+import Typography from "@/components/ui/Typography";
+import AnchorButton from "@/components/ui/AnchorButton";
+import Section from "@/components/layout/Section";
 
 interface USP {
   title: string;

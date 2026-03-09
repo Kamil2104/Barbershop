@@ -1,4 +1,4 @@
-import SmartLink from "@/ui/components/SmartLink";
+import SmartLink from "./SmartLink";
 
 interface AnchorButtonProps {
   text: string;
