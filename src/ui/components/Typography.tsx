@@ -1,12 +1,12 @@
-import type { ElementType, ReactNode } from 'react'
+import type { ElementType, ReactNode } from "react";
 
 interface TypographyProps {
-  variant: 'h1' | 'h2' | 'h4' | 'p-lg' | 'p-sm'
-  children: ReactNode
-  className?: string
+  variant: "h1" | "h2" | "h4" | "p-lg" | "p-sm";
+  children: ReactNode;
+  className?: string;
 }
 
-const Typography = ({ variant, children, className = '' }: TypographyProps) => {
+const Typography = ({ variant, children, className = "" }: TypographyProps) => {
   const styles = {
     // Big title
     h1: "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 md:mb-6 lg:mb-10",
@@ -17,17 +17,13 @@ const Typography = ({ variant, children, className = '' }: TypographyProps) => {
     // Big paragraph
     "p-lg": "text-base lg:text-xl leading-relaxed mt-4",
     // Small paragraph
-    "p-sm": "text-sm md:text-base"
-  }
+    "p-sm": "text-sm md:text-base",
+  };
 
   const Tag: ElementType =
-    variant === 'h1' || variant === 'h2' || variant === 'h4' ? variant : 'p'
+    variant === "h1" || variant === "h2" || variant === "h4" ? variant : "p";
 
-  return (
-    <Tag className={`${styles[variant]} ${className}`}>
-      {children}
-    </Tag>
-  )
-}
+  return <Tag className={`${styles[variant]} ${className}`}>{children}</Tag>;
+};
 
-export default Typography
+export default Typography;

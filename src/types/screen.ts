@@ -1,1 +1,1 @@
-export type ScreenSize = 'sm' | 'md' | 'lg'
+export type ScreenSize = "sm" | "md" | "lg";

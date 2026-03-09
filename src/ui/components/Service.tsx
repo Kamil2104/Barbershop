@@ -1,25 +1,27 @@
-import React from 'react'
+import React from "react";
 
-import Typography from './Typography'
+import Typography from "./Typography";
 
-import type { OfferingItem } from '@/types/service'
+import type { OfferingItem } from "@/types/service";
 
-const Service = (offer : OfferingItem) => {
+const Service = (offer: OfferingItem) => {
   return (
     <div
       key={offer.name}
       className="group relative bg-surface-secondary rounded-2xl p-5 md:p-6 lg:p-8 lg:transition-all lg:duration-300 lg:hover:-translate-y-2"
     >
       <div className="flex flex-col h-full justify-between">
+        <div>
+          <h3 className="text-text-primary text-lg md:text-xl font-medium tracking-tight mb-1 md:mb-2">
+            {offer.name}
+          </h3>
 
-      <div>
-        <h3 className="text-text-primary text-lg md:text-xl font-medium tracking-tight mb-1 md:mb-2">
-          {offer.name}
-        </h3>
-
-        <Typography variant="p-sm" className='text-text-muted text-sm leading-relaxed'>
-          {offer.description}
-        </Typography>
+          <Typography
+            variant="p-sm"
+            className="text-text-muted text-sm leading-relaxed"
+          >
+            {offer.description}
+          </Typography>
         </div>
 
         <div className="mt-4 md:mt-6 lg:mt-8 flex items-end justify-between">
@@ -35,7 +37,7 @@ const Service = (offer : OfferingItem) => {
 
       <div className="absolute inset-0 rounded-2xl border border-transparent lg:group-hover:border-text-primary lg:transition-colors lg:duration-300 pointer-events-none" />
     </div>
-  )
-}
+  );
+};
 
-export default React.memo(Service)
+export default React.memo(Service);

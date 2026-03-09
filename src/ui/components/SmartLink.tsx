@@ -1,19 +1,22 @@
-import React from 'react'
+import React from "react";
 
-import { Link as RouterLink } from 'react-router-dom'
+import { Link as RouterLink } from "react-router-dom";
 
-import { scrollTo } from '@/utils/scrollTo'
+import { scrollTo } from "@/utils/scrollTo";
 
 interface SmartLinkProps {
-  href: string
-  children: React.ReactNode
-  className?: string
-  onClick?: () => void
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
 }
 
 const SmartLink = ({ href, children, className, onClick }: SmartLinkProps) => {
-  const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')
-  const isAnchor = href.startsWith('#')
+  const isExternal =
+    href.startsWith("http") ||
+    href.startsWith("mailto:") ||
+    href.startsWith("tel:");
+  const isAnchor = href.startsWith("#");
 
   // Handling of external links (Booksy, Social Media, Phone)
   if (isExternal) {
@@ -27,7 +30,7 @@ const SmartLink = ({ href, children, className, onClick }: SmartLinkProps) => {
       >
         {children}
       </a>
-    )
+    );
   }
 
   // Handling of anchors (Smooth Scroll on the same page)
@@ -37,14 +40,14 @@ const SmartLink = ({ href, children, className, onClick }: SmartLinkProps) => {
         href={href}
         className={className}
         onClick={(e) => {
-          e.preventDefault()
-          scrollTo(href.replace('#', ''))
-          onClick?.()
+          e.preventDefault();
+          scrollTo(href.replace("#", ""));
+          onClick?.();
         }}
       >
         {children}
       </a>
-    )
+    );
   }
 
   // Handling of navigation to SPA (e.g. /privacy, /terms)
@@ -52,7 +55,7 @@ const SmartLink = ({ href, children, className, onClick }: SmartLinkProps) => {
     <RouterLink to={href} className={className} onClick={onClick}>
       {children}
     </RouterLink>
-  )
-}
+  );
+};
 
-export default SmartLink
+export default SmartLink;

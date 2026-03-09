@@ -1,4 +1,4 @@
 export interface OpenHours {
-    day: string,
-    hours: string
+  day: string;
+  hours: string;
 }

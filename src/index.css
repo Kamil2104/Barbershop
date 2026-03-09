@@ -7,12 +7,12 @@
 }
 
 @theme {
-    --color-surface-primary: #f4f4f5;
-    --color-surface-inverted: #18181b;
-    --color-surface-subtle: #e5e7eb;
+  --color-surface-primary: #f4f4f5;
+  --color-surface-inverted: #18181b;
+  --color-surface-subtle: #e5e7eb;
 
-    --color-text-primary: #18181b;
-    --color-text-inverted: #f4f4f5;
-    --color-text-muted: #52525b;
-    --color-text-subtle: #e5e7eb;
-  }
+  --color-text-primary: #18181b;
+  --color-text-inverted: #f4f4f5;
+  --color-text-muted: #52525b;
+  --color-text-subtle: #e5e7eb;
+}

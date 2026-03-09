@@ -1,9 +1,9 @@
-import type { MenuItem } from '@/types/navigation'
-import AnchorButton from '@/ui/components/AnchorButton'
+import type { MenuItem } from "@/types/navigation";
+import AnchorButton from "@/ui/components/AnchorButton";
 
 interface OptionProps {
-  item: MenuItem
-  onClick?: () => void
+  item: MenuItem;
+  onClick?: () => void;
 }
 
 const Option = ({ item, onClick }: OptionProps) => {
@@ -32,7 +32,7 @@ const Option = ({ item, onClick }: OptionProps) => {
         lg:after:transition-all
         lg:hover:after:w-full"
     />
-  )
-}
+  );
+};
 
-export default Option
+export default Option;

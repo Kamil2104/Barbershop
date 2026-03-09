@@ -1,12 +1,16 @@
-import Section from '@/ui/layout/Section'
-import Typography from '@/ui/components/Typography'
+import Section from "@/ui/layout/Section";
+import Typography from "@/ui/components/Typography";
 
 const Map = () => {
   return (
-    <Section id="location" background='bg-surface-primary' className="pb-12! md:pb-14! lg:pb-20!">
-        <Typography variant="h1" className='text-text-primary mb-4 md:mb-6'>
-          Find us
-        </Typography>
+    <Section
+      id="location"
+      background="bg-surface-primary"
+      className="pb-12! md:pb-14! lg:pb-20!"
+    >
+      <Typography variant="h1" className="text-text-primary mb-4 md:mb-6">
+        Find us
+      </Typography>
 
       <div className="w-full h-[450px] md:h-[550px] overflow-hidden rounded-xl border border-border-subtle">
         <iframe
@@ -22,7 +26,7 @@ const Map = () => {
         />
       </div>
     </Section>
-  )
-}
+  );
+};
 
-export default Map
+export default Map;

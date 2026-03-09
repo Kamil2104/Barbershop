@@ -1,4 +1,4 @@
-import type { MenuItem } from "@/types/navigation"
+import type { MenuItem } from "@/types/navigation";
 
 export const MENU_ITEMS: MenuItem[] = [
   { label: "About", href: "#about" },
@@ -6,10 +6,10 @@ export const MENU_ITEMS: MenuItem[] = [
   { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#reviews" },
   { label: "Find Us", href: "#location" },
-  { label: "Contact", href: "#contact" }
-]
+  { label: "Contact", href: "#contact" },
+];
 
 export const FOOTER_LINKS: MenuItem[] = [
-  { label: 'Privacy', href: '/privacy' },
-  { label: 'Terms', href: '/terms' },
-]
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
+];

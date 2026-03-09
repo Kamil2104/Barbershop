@@ -1,46 +1,45 @@
-import { useState } from 'react'
-import { useHeaderVisibility } from '@/hooks/useHeaderVisibility'
+import { useState } from "react";
+import { useHeaderVisibility } from "@/hooks/useHeaderVisibility";
 
-import type { MenuItem } from '@/types/navigation'
+import type { MenuItem } from "@/types/navigation";
 
-import Option from '@/ui/components/Option'
-import AnchorButton from '@/ui/components/AnchorButton'
+import Option from "@/ui/components/Option";
+import AnchorButton from "@/ui/components/AnchorButton";
 
-import { scrollTo } from '@/utils/scrollTo'
+import { scrollTo } from "@/utils/scrollTo";
 
 interface HeaderProps {
-    items: MenuItem[]
+  items: MenuItem[];
 }
 
 interface NavContentProps {
-  items: MenuItem[]
-  onItemClick?: () => void
-  layoutClassName?: string
+  items: MenuItem[];
+  onItemClick?: () => void;
+  layoutClassName?: string;
 }
 
 const Header = ({ items }: HeaderProps) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const isVisible = useHeaderVisibility(80);
 
   return (
-    <header className={`fixed top-0 left-0 w-full min-h-[10vh] bg-surface-primary text-text-primary flex items-center justify-between px-5 md:px-7.5 lg:px-10 transition-transform duration-300 ease-in-out z-50 ${
-      isVisible ? 'translate-y-0' : '-translate-y-full'
-    }`}>
-      <div className="text-2xl font-semibold tracking-wide">
-        Barbershop
-      </div>
+    <header
+      className={`fixed top-0 left-0 w-full min-h-[10vh] bg-surface-primary text-text-primary flex items-center justify-between px-5 md:px-7.5 lg:px-10 transition-transform duration-300 ease-in-out z-50 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <div className="text-2xl font-semibold tracking-wide">Barbershop</div>
 
       <nav className="hidden lg:flex">
-        <NavContent
-          items={items}
-          layoutClassName="flex items-center gap-5"
-        />
+        <NavContent items={items} layoutClassName="flex items-center gap-5" />
       </nav>
 
       <div className="lg:hidden">
         <button
-          onClick={() => {setIsOpen(prev => !prev)}}
+          onClick={() => {
+            setIsOpen((prev) => !prev);
+          }}
           className="flex flex-col gap-1"
         >
           <span className="w-6 h-0.5 bg-surface-inverted"></span>
@@ -64,10 +63,14 @@ const Header = ({ items }: HeaderProps) => {
         />
       </div>
     </header>
-  )
-}
+  );
+};
 
-const NavContent = ({ items, onItemClick, layoutClassName }: NavContentProps) => {
+const NavContent = ({
+  items,
+  onItemClick,
+  layoutClassName,
+}: NavContentProps) => {
   return (
     <div className={layoutClassName}>
       {items.map((item) => (
@@ -75,22 +78,22 @@ const NavContent = ({ items, onItemClick, layoutClassName }: NavContentProps) =>
           key={item.label}
           item={item}
           onClick={() => {
-            scrollTo(item.href.replace('#', ''))
-            onItemClick?.()
+            scrollTo(item.href.replace("#", ""));
+            onItemClick?.();
           }}
         />
       ))}
 
       <AnchorButton
-        text='Book now'
-        href='https://booksy.com/pl-pl?gad_source=1&gad_campaignid=11490709833&gbraid=0AAAAADE3ZKsAEuOjtBhuOsQlGGFGAGbK4&gclid=CjwKCAiA-__MBhAKEiwASBmsBBWdmlTccRnmid2qaNU5pqVLznIT7ZEJpwu4BYm2G7pPeubrcQapghoCo6EQAvD_BwE#ba_s=seo'
+        text="Book now"
+        href="https://booksy.com/pl-pl?gad_source=1&gad_campaignid=11490709833&gbraid=0AAAAADE3ZKsAEuOjtBhuOsQlGGFGAGbK4&gclid=CjwKCAiA-__MBhAKEiwASBmsBBWdmlTccRnmid2qaNU5pqVLznIT7ZEJpwu4BYm2G7pPeubrcQapghoCo6EQAvD_BwE#ba_s=seo"
         onClick={() => {
-          onItemClick?.()
+          onItemClick?.();
         }}
-        className='px-5 py-2 bg-zinc-900 text-zinc-100 text-sm font-medium lg:hover:bg-zinc-700 lg:transition-colors lg:duration-200'
+        className="px-5 py-2 bg-zinc-900 text-zinc-100 text-sm font-medium lg:hover:bg-zinc-700 lg:transition-colors lg:duration-200"
       />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

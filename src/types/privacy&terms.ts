@@ -1,4 +1,4 @@
 export interface PolicyItem {
-    title: string,
-    content: string
+  title: string;
+  content: string;
 }
