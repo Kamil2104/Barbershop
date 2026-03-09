@@ -4,8 +4,8 @@ import useScreenSize from "@/hooks/useScreenSize";
 
 import Section from "@/ui/layout/Section";
 import Typography from "@/ui/components/Typography";
-import Photo from "@/ui/components/Photo";
 import ChangeViewButton from "@/ui/components/ChangeViewButton";
+import AnimatedImage from "../components/AnimatedImage";
 
 import { SHOP_IMAGES } from "@/data/galleryImages";
 
@@ -29,7 +29,9 @@ const Gallery = () => {
 
       <div className="mt-6 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {visiblePhotos.map((img: Image) => (
-          <Photo key={img.src} {...img} />
+          <div key={img.src} className="overflow-hidden rounded-xl group">
+            <AnimatedImage className="h-[200px] md:h-[300px] lg:h-[400px]" {...img} />
+          </div>
         ))}
       </div>
 

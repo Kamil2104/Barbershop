@@ -3,15 +3,15 @@ import React from "react"
 import type { Employee } from "@/types/employee"
 
 import Typography from "./Typography"
+import AnimatedImage from "./AnimatedImage"
 
 const Barber = ({ image, name, role, description }: Employee) => {
   return (
     <div className="group flex flex-col h-fit w-4/5 max-w-[300px] md:max-w-[350px] lg:max-w-[400px] md:w-full bg-surface-secondary rounded-3xl overflow-hidden border border-transparent lg:hover:border-text-primary/20 lg:transition-all lg:duration-500 lg:hover:shadow-2xl lg:hover:-translate-y-2">
       <div className="relative aspect-3/4 overflow-hidden">
-        <img
+        <AnimatedImage
           src={image}
-          alt={name}
-          className="w-full h-full object-cover object-top lg:grayscale lg:group-hover:grayscale-0 lg:transition-all lg:duration-700 lg:group-hover:scale-105"
+          alt={`Our barber: ${name}`}
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500" />
       </div>
