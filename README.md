@@ -7,6 +7,7 @@ A premium, high-performance landing page for a modern barbershop, built with a "
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
+[![Deploy with Vercel](https://vercel.com/button)](https://twoj-link-z-vercela.vercel.app)
 
 ## ✨ Key Features
 
