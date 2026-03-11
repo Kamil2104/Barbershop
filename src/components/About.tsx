@@ -1,13 +1,22 @@
+import { useState } from "react";
+
 import Typography from "@/components/ui/Typography";
 import AnchorButton from "@/components/ui/AnchorButton";
 import Section from "@/components/layout/Section";
+import LoadingImage from "@/components/ui/LoadingImage";
+import FallbackImage from "@/components/ui/FallbackImage";
 
 interface USP {
   title: string;
   description: string;
 }
 
+const ABOUT_PHOTO_ALT = "Barbershop interiot"
+
 const About = () => {
+  const [hasError, setHasError] = useState<boolean>(false);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+
   // Unique Selling Proposition
   const USP: USP[] = [
     {
@@ -70,11 +79,19 @@ const About = () => {
         </div>
 
         <div className="flex justify-center items-center relative w-full h-auto overflow-hidden self-center">
-          <img
-            src="https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg"
-            alt="Barbershop interior"
-            className="w-3xl h-auto grayscale rounded-lg shadow-lg "
-          />
+          {!isLoaded && !hasError && <LoadingImage />}
+
+          {hasError ? (
+            <FallbackImage alt={ABOUT_PHOTO_ALT} />
+          ) : (
+              <img
+              src="https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg"
+              alt={ABOUT_PHOTO_ALT}
+              className={`w-3xl h-auto grayscale rounded-lg shadow-lg ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+              onLoad={() => setIsLoaded(true)}
+              onError={() => setHasError(true)}
+            />
+          )}
         </div>
       </div>
     </Section>
